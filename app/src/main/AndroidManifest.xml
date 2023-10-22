@@ -33,21 +33,6 @@
         android:theme="@style/Theme.TutionNotesAplication"
         tools:targetApi="tiramisu">
         <activity
-            android:name=".Activities.ui.AskMe.SeeAnswerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.ui.AskMe.SeeQuestionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.ui.AskMe.AnswerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.ui.AskMe.SeeAndEditActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.ui.AskMe.PostQuestionActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activities.ui.CreateNote.EditNoteActivity"
             android:exported="false" />
         <activity
@@ -75,6 +60,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
     </application>
 
 </manifest>

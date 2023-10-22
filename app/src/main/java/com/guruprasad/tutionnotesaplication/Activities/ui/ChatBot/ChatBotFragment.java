@@ -16,15 +16,11 @@ public class ChatBotFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-
         binding = FragmentchatbotBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-
-
         return root;
     }
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
