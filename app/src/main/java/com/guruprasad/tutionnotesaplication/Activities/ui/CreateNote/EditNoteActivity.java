@@ -29,10 +29,12 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.guruprasad.tutionnotesaplication.Adapters.EditImageAdapter;
 import com.guruprasad.tutionnotesaplication.Adapters.EditNoteRecyclerAdapter;
 import com.guruprasad.tutionnotesaplication.Adapters.SeeNoteAdapter;
 import com.guruprasad.tutionnotesaplication.Constants;
 import com.guruprasad.tutionnotesaplication.CustomDialog;
+import com.guruprasad.tutionnotesaplication.Models.ImageDataModel;
 import com.guruprasad.tutionnotesaplication.Models.NoteDataModel;
 import com.guruprasad.tutionnotesaplication.Models.NoteModel;
 import com.guruprasad.tutionnotesaplication.R;
@@ -61,11 +63,8 @@ public class EditNoteActivity extends AppCompatActivity {
 
     private String uniqueKey;
 
-
-
-
-
     EditNoteRecyclerAdapter adapter ;
+    EditImageAdapter imageAdapter ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -168,6 +167,26 @@ public class EditNoteActivity extends AppCompatActivity {
             }
         };
         binding.recyclerview.setAdapter(adapter);
+
+        binding.imageRecview.setLayoutManager(new WrapContentLinearLayoutManager(EditNoteActivity.this,LinearLayoutManager.VERTICAL,false));
+        Query imagequery = database.getReference().child("Notes").child(auth.getCurrentUser().getUid()).child(noteId).child("Images");
+        FirebaseRecyclerOptions<ImageDataModel> imageOptions = new FirebaseRecyclerOptions.Builder<ImageDataModel>().setQuery(imagequery,ImageDataModel.class).build();
+        imageAdapter = new EditImageAdapter(imageOptions,EditNoteActivity.this,noteId)
+        {
+            @Override
+            public void onDataChanged() {
+                super.onDataChanged();
+                binding.progressbar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onError(@NonNull DatabaseError error) {
+                super.onError(error);
+                Constants.error(EditNoteActivity.this,"Error : "+error.getMessage());
+                binding.progressbar.setVisibility(View.GONE);
+            }
+        };
+        binding.imageRecview.setAdapter(imageAdapter);
 
 
         binding.update.setOnClickListener(new View.OnClickListener() {
@@ -322,12 +341,14 @@ public class EditNoteActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         adapter.startListening();
+        imageAdapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+        imageAdapter.stopListening();
     }
 
     @Override

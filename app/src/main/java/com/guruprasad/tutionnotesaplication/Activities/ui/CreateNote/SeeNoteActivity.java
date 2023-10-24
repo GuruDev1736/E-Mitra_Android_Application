@@ -16,9 +16,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.guruprasad.tutionnotesaplication.Adapters.SeeImageAdapter;
 import com.guruprasad.tutionnotesaplication.Adapters.SeeNoteAdapter;
 import com.guruprasad.tutionnotesaplication.Constants;
 import com.guruprasad.tutionnotesaplication.CustomDialog;
+import com.guruprasad.tutionnotesaplication.Models.ImageDataModel;
 import com.guruprasad.tutionnotesaplication.Models.NoteDataModel;
 import com.guruprasad.tutionnotesaplication.R;
 import com.guruprasad.tutionnotesaplication.databinding.ActivitySeeNoteBinding;
@@ -29,6 +31,7 @@ public class SeeNoteActivity extends AppCompatActivity {
     FirebaseDatabase database ;
     FirebaseAuth auth ;
     private SeeNoteAdapter adapter ;
+    private SeeImageAdapter image_Adapter ;
 
 
     @Override
@@ -55,6 +58,7 @@ public class SeeNoteActivity extends AppCompatActivity {
         binding.actionbar.activityName.setText("See Note");
         binding.actionbar.files.setVisibility(View.INVISIBLE);
         binding.actionbar.options.setVisibility(View.INVISIBLE);
+        binding.actionbar.camera.setVisibility(View.INVISIBLE);
         binding.notetext.setText("Your note is here");
 
 
@@ -91,6 +95,28 @@ public class SeeNoteActivity extends AppCompatActivity {
 
         binding.progressbar.setVisibility(View.VISIBLE);
 
+        binding.imageRecview.setLayoutManager(new WrapContentLinearLayoutManager(SeeNoteActivity.this,LinearLayoutManager.VERTICAL,false));
+        Query imageQuery = database.getReference().child("Notes").child(auth.getCurrentUser().getUid()).child(id).child("Images");
+        FirebaseRecyclerOptions<ImageDataModel> imageOption = new FirebaseRecyclerOptions.Builder<ImageDataModel>().setQuery(imageQuery, ImageDataModel.class).build();
+        image_Adapter = new SeeImageAdapter(imageOption)
+        {
+            @Override
+            public void onDataChanged() {
+                super.onDataChanged();
+                binding.progressbar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onError(@NonNull DatabaseError error) {
+                super.onError(error);
+                Constants.error(SeeNoteActivity.this,"Image Error : "+error.getMessage());
+                binding.progressbar.setVisibility(View.GONE);
+            }
+        };
+
+        binding.imageRecview.setAdapter(image_Adapter);
+
+
         binding.recyclerview.setLayoutManager(new WrapContentLinearLayoutManager(SeeNoteActivity.this,LinearLayoutManager.VERTICAL,false));
         Query query = database.getReference().child("Notes").child(auth.getCurrentUser().getUid()).child(id).child("PDF");
         FirebaseRecyclerOptions<NoteDataModel> options = new FirebaseRecyclerOptions.Builder<NoteDataModel>().setQuery(query,NoteDataModel.class).build();
@@ -118,12 +144,14 @@ public class SeeNoteActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         adapter.startListening();
+        image_Adapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+        image_Adapter.stopListening();
     }
 
     @Override

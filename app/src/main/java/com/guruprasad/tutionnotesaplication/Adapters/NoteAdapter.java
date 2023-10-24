@@ -44,10 +44,10 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.onviewholder> 
     private List<NoteModel> model ;
 
     private String UniqueKey;
-    FirebaseDatabase database = FirebaseDatabase.getInstance() ;
-    FirebaseStorage storage =  FirebaseStorage.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance() ;
+        FirebaseStorage storage =  FirebaseStorage.getInstance();
 
-    FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseAuth auth = FirebaseAuth.getInstance();
 
     public NoteAdapter(Context context, List<NoteModel> model) {
         this.context = context;

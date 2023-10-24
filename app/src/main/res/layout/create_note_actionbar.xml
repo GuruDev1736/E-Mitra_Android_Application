@@ -38,6 +38,15 @@
         android:layout_weight="1"/>
 
     <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_a_photo_24"
+        android:padding="15dp"
+        android:backgroundTint="@color/transparent"
+        android:clickable="true"
+        android:focusable="true"/>
+    <ImageButton
         android:id="@+id/files"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

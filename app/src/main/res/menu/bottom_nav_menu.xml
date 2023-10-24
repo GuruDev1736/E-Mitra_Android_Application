@@ -12,8 +12,8 @@
         android:title="@string/chat_bot" />
 
     <item
-        android:id="@+id/navigation_askMe"
-        android:icon="@drawable/baseline_task_alt_24"
-        android:title="@string/ask_me" />
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/outline_account_circle_24"
+        android:title="@string/profile" />
 
 </menu>

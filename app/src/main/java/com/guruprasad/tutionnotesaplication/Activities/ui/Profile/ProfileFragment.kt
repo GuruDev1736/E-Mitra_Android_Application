@@ -1,4 +1,4 @@
-package com.guruprasad.tutionnotesaplication.Activities.ui.AskMe
+package com.guruprasad.tutionnotesaplication.Activities.ui.Profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.guruprasad.tutionnotesaplication.databinding.FragmentNotificationsBinding
 
-class AskMeFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentNotificationsBinding
     private lateinit var database: FirebaseDatabase

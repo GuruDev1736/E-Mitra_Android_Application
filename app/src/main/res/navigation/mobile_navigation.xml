@@ -15,11 +15,11 @@
         android:id="@+id/navigation_chatBot"
         android:name="com.guruprasad.tutionnotesaplication.Activities.ui.ChatBot.ChatBotFragment"
         android:label="@string/chat_bot"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragmentchatbot" />
 
     <fragment
-        android:id="@+id/navigation_askMe"
-        android:name="com.guruprasad.tutionnotesaplication.Activities.ui.AskMe.AskMeFragment"
-        android:label="@string/ask_me"
+        android:id="@+id/navigation_profile"
+        android:name="com.guruprasad.tutionnotesaplication.Activities.ui.Profile.ProfileFragment"
+        android:label="@string/profile"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
