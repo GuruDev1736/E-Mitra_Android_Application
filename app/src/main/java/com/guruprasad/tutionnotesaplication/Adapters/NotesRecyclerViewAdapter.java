@@ -28,48 +28,58 @@ import com.guruprasad.tutionnotesaplication.Constants;
 import com.guruprasad.tutionnotesaplication.Models.NoteDataModel;
 import com.guruprasad.tutionnotesaplication.R;
 
-public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataModel,NotesRecyclerViewAdapter.onViewHolder> {
+public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataModel, NotesRecyclerViewAdapter.onViewHolder> {
 
+    private final Context context;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     FirebaseAuth auth = FirebaseAuth.getInstance();
-    private Context context ;
 
     public NotesRecyclerViewAdapter(@NonNull FirebaseRecyclerOptions<NoteDataModel> options, Context context) {
         super(options);
         this.context = context;
     }
 
+    public static String truncateString(String input, int maxLength) {
+        if (input.length() <= maxLength) {
+            return input;
+        } else {
+            return input.substring(0, maxLength - 1) + "...";
+        }
+    }
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onBindViewHolder(@NonNull onViewHolder holder, int position, @NonNull NoteDataModel model) {
 
-            String title = truncateString(model.getTitle(),15);
-            holder.title.setText(title);
+        String title = truncateString(model.getTitle(), 15);
+        holder.title.setText("Title : " + title);
+        holder.description.setText("Description : " + truncateString(model.getNote(), 15));
+        holder.tag.setText("Tag : " + model.getTag());
 
-            holder.see.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent seeNoteIntent = new Intent(context, SeeNoteActivity.class);
-                    seeNoteIntent.putExtra("uniqueId",model.getUniqueID());
-                    context.startActivity(seeNoteIntent);
-                }
-            });
+        holder.see.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent seeNoteIntent = new Intent(context, SeeNoteActivity.class);
+                seeNoteIntent.putExtra("uniqueId", model.getUniqueID());
+                context.startActivity(seeNoteIntent);
+            }
+        });
 
-            holder.edit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent editNoteIntent = new Intent(context, EditNoteActivity.class);
-                    editNoteIntent.putExtra("noteId",model.getUniqueID());
-                    context.startActivity(editNoteIntent);
-                }
-            });
+        holder.edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent editNoteIntent = new Intent(context, EditNoteActivity.class);
+                editNoteIntent.putExtra("noteId", model.getUniqueID());
+                context.startActivity(editNoteIntent);
+            }
+        });
 
-            holder.delete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    showDeleteConfirmationDialog(model);
-                }
-            });
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDeleteConfirmationDialog(model);
+            }
+        });
 
     }
 
@@ -86,9 +96,8 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
 
     private void deleteNote(NoteDataModel model) {
 
-        if (model.getUniqueID()!=null)
-        {
-            ProgressDialog pd = Constants.progress_dialog(context,"Please Wait","Deleting your note...");
+        if (model.getUniqueID() != null) {
+            ProgressDialog pd = Constants.progress_dialog(context, "Please Wait", "Deleting your note...");
             pd.show();
 
 
@@ -97,20 +106,16 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
 
-                            if (task.isSuccessful())
-                            {
+                            if (task.isSuccessful()) {
                                 Constants.success(context, "Notes has successfully deleted");
-                            }
-                            else
-                            {
-                                Constants.error(context,"Failed to delete note : "+ task.getException().getMessage());
+                            } else {
+                                Constants.error(context, "Failed to delete note : " + task.getException().getMessage());
                             }
                             pd.dismiss();
                         }
                     });
-        }
-        else {
-            Constants.error(context,"Unique id is null");
+        } else {
+            Constants.error(context, "Unique id is null");
         }
 
 
@@ -119,16 +124,15 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
     @NonNull
     @Override
     public onViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.notelayout,parent,false);
-       return new onViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.notelayout, parent, false);
+        return new onViewHolder(view);
     }
 
     public class onViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView logo ;
-        MaterialTextView title ;
-        ImageButton see , edit , delete;
-
+        ImageView logo;
+        MaterialTextView title, description, tag;
+        ImageButton see, edit, delete;
 
 
         public onViewHolder(@NonNull View itemView) {
@@ -136,18 +140,12 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
 
             logo = itemView.findViewById(R.id.logo);
             title = itemView.findViewById(R.id.title);
+            description = itemView.findViewById(R.id.description);
+            tag = itemView.findViewById(R.id.tag);
             see = itemView.findViewById(R.id.see);
             edit = itemView.findViewById(R.id.edit);
             delete = itemView.findViewById(R.id.delete);
 
-        }
-    }
-
-    public static String truncateString(String input, int maxLength) {
-        if (input.length() <= maxLength) {
-            return input;
-        } else {
-            return input.substring(0, maxLength - 1) + "...";
         }
     }
 }

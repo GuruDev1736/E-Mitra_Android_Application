@@ -127,6 +127,37 @@
                 android:layout_gravity="end"
                 android:layout_margin="10dp"/>
 
+            <com.google.android.material.card.MaterialCardView
+                app:cardElevation="5dp"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Note Tag"
+                        android:textSize="15sp"/>
+
+                    <Spinner
+                        android:id="@+id/tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:spinnerMode="dialog"
+                        android:tooltipText="TAGS"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/create"
                 android:layout_width="match_parent"

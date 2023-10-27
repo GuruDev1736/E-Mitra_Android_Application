@@ -79,6 +79,7 @@ public class SeeNoteActivity extends AppCompatActivity {
 
                     binding.title.setText(model.getTitle());
                     binding.note.setText(model.getNote());
+                    binding.tag.setText(model.getTag());
                     }
 
                 }

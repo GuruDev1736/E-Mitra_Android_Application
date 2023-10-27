@@ -16,4 +16,24 @@
     <string name="todo">TODO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="tags">
+        <item>Study</item>
+        <item>Work</item>
+        <item>Personal</item>
+        <item>To-Do</item>
+        <item>Ideas</item>
+        <item>Meetings</item>
+        <item>Shopping</item>
+        <item>Recipes</item>
+        <item>Travel</item>
+        <item>Health</item>
+        <item>Finance</item>
+        <item>Books</item>
+        <item>Movies/TV Shows</item>
+        <item>Hobbies</item>
+        <item>Goals</item>
+        <item>Quotes</item>
+        <item>Miscellaneous</item>
+    </string-array>
 </resources>

@@ -20,6 +20,8 @@ import android.provider.OpenableColumns;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -76,7 +78,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CreateNoteActivity extends AppCompatActivity {
+public class CreateNoteActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ActivityCreateNoteBinding binding ;
     List<NoteModel> datalist = new ArrayList<>();
@@ -119,6 +121,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         });
 
         binding.actionbar.activityName.setText("Create Note");
+        binding.actionbar.options.setVisibility(View.GONE);
         binding.actionbar.files.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -257,6 +260,7 @@ public class CreateNoteActivity extends AppCompatActivity {
 
                 String title = binding.title.getText().toString();
                 String note = binding.note.getText().toString();
+                String tag = binding.tags.getSelectedItem().toString();
 
                 if (TextUtils.isEmpty(title))
                 {
@@ -268,10 +272,15 @@ public class CreateNoteActivity extends AppCompatActivity {
                     Constants.error(CreateNoteActivity.this,"Note is null please enter the input");
                     return;
                 }
+                if (tag.isEmpty())
+                {
+                    Constants.error(CreateNoteActivity.this,"Tag should not be empty");
+                    return;
+                }
 
                 dialog.show();
 
-                NoteDataModel model  = new NoteDataModel(title,note,UniqueKey,UserId);
+                NoteDataModel model  = new NoteDataModel(title,note,UniqueKey,UserId,tag);
                 database.getReference().child("Notes").child(UserId).child(UniqueKey).setValue(model)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
@@ -377,6 +386,14 @@ public class CreateNoteActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this ,R.array.tags, es.dmoral.toasty.R.layout.support_simple_spinner_dropdown_item);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        binding.tags.setAdapter(arrayAdapter);
+
+
+
     }
 
 
@@ -475,5 +492,15 @@ public class CreateNoteActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

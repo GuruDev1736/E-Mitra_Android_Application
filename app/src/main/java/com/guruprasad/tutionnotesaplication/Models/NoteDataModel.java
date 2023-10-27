@@ -4,21 +4,14 @@ import java.util.List;
 
 public class NoteDataModel {
 
-    private String title , note , UniqueID , userid , link ,fileKey , filename ;
+    private String title , note , UniqueID , userid , link ,fileKey , filename , tag ;
 
-    public NoteDataModel(String title, String note, String uniqueID, String userid, String link) {
+    public NoteDataModel(String title, String note, String uniqueID, String userid, String tag) {
         this.title = title;
         this.note = note;
         UniqueID = uniqueID;
         this.userid = userid;
-        this.link = link;
-    }
-
-    public NoteDataModel(String title, String note, String uniqueID, String userid) {
-        this.title = title;
-        this.note = note;
-        UniqueID = uniqueID;
-        this.userid = userid;
+        this.tag = tag ;
     }
 
     public NoteDataModel(String title, String note, String uniqueID, String userid, String link, String fileKey, String filename) {
@@ -30,6 +23,10 @@ public class NoteDataModel {
         this.fileKey = fileKey;
         this.filename = filename;
     }
+
+
+
+
 
     public String getTitle() {
         return title;
@@ -88,5 +85,13 @@ public class NoteDataModel {
 
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 }
