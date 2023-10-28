@@ -83,6 +83,7 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
 
     }
 
+
     private void showDeleteConfirmationDialog(NoteDataModel model) {
         MaterialAlertDialogBuilder dialogBuilder = Constants.dialog(context, "Note", "Are you sure you want to delete this note")
                 .setPositiveButton("YES", (dialogInterface, i) -> {
@@ -119,6 +120,11 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
         }
 
 
+    }
+
+    @Override
+    public int getItemCount() {
+        return getSnapshots().size();
     }
 
     @NonNull
