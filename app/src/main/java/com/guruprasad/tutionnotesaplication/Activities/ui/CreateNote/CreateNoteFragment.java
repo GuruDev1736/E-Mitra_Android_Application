@@ -28,7 +28,6 @@ public class CreateNoteFragment extends Fragment {
     FirebaseAuth auth;
     private FragmentHomeBinding binding;
     private NotesRecyclerViewAdapter adapter;
-    private CustomDialog pd;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
@@ -36,8 +35,10 @@ public class CreateNoteFragment extends Fragment {
 
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
-        pd = new CustomDialog(getContext());
+
+        CustomDialog pd = new CustomDialog(requireContext());
         pd.show();
+
 
         binding.create.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,12 +54,30 @@ public class CreateNoteFragment extends Fragment {
                 .setQuery(baseQuery, NoteDataModel.class)
                 .build();
 
+
+        binding.search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                String search = query;
+                process_search(search, pd);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                String search = newText;
+                process_search(search, pd);
+                return false;
+            }
+        });
+
+
         adapter = new NotesRecyclerViewAdapter(options, getContext()) {
+
             @Override
             public void onDataChanged() {
                 super.onDataChanged();
                 pd.dismiss();
-
             }
 
             @Override
@@ -71,28 +90,12 @@ public class CreateNoteFragment extends Fragment {
 
         binding.recyclerview.setAdapter(adapter);
 
-        binding.search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                String search = query;
-                process_search(search);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                String search = newText;
-                process_search(search);
-                return false;
-            }
-        });
-
 
         return root;
     }
 
 
-    private void process_search(String search) {
+    private void process_search(String search, CustomDialog pd) {
 
         Query searchQuery = database.getReference().child("Notes").child(auth.getCurrentUser().getUid()).orderByChild("tag").startAt(search).endAt(search + "\uf8ff");
 
@@ -100,7 +103,21 @@ public class CreateNoteFragment extends Fragment {
                 .setQuery(searchQuery, NoteDataModel.class)
                 .build();
 
-        adapter = new NotesRecyclerViewAdapter(searchOptions, getContext());
+        adapter = new NotesRecyclerViewAdapter(searchOptions, getContext()) {
+            @Override
+            public void onDataChanged() {
+                super.onDataChanged();
+                pd.dismiss();
+
+            }
+
+
+            @Override
+            public void onError(@NonNull DatabaseError error) {
+                super.onError(error);
+                pd.dismiss();
+            }
+        };
         adapter.startListening();
         binding.recyclerview.setAdapter(adapter);
     }
@@ -120,6 +137,7 @@ public class CreateNoteFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+
         binding = null;
     }
 }

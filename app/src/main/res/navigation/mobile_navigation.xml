@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/navigation_chatBot"
         android:name="com.guruprasad.tutionnotesaplication.Activities.ui.ChatBot.ChatBotFragment"
-        android:label="@string/chat_bot"
+        android:label="@string/Web"
         tools:layout="@layout/fragmentchatbot" />
 
     <fragment

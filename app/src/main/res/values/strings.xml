@@ -11,11 +11,12 @@
     <string name="full_name">Full Name</string>
     <string name="title_activity_navigation">Navigation</string>
     <string name="create_note">Create Notes</string>
-    <string name="chat_bot">ChatBot</string>
+    <string name="Web">Web</string>
     <string name="profile">Profile</string>
     <string name="todo">TODO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
 
     <string-array name="tags">
         <item>Study</item>

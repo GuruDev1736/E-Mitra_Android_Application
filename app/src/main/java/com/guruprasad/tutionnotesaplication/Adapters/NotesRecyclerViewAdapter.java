@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,8 @@ import com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.SeeNoteActi
 import com.guruprasad.tutionnotesaplication.Constants;
 import com.guruprasad.tutionnotesaplication.Models.NoteDataModel;
 import com.guruprasad.tutionnotesaplication.R;
+
+import java.util.List;
 
 public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataModel, NotesRecyclerViewAdapter.onViewHolder> {
 
@@ -55,6 +59,45 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
         holder.title.setText("Title : " + title);
         holder.description.setText("Description : " + truncateString(model.getNote(), 15));
         holder.tag.setText("Tag : " + model.getTag());
+
+        holder.share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String message = "Title : " + model.getTitle() + "\n" + "Description : " + model
+                        .getNote();
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, message);
+
+                PackageManager packageManager = holder.itemView.getContext().getPackageManager();
+                List<ResolveInfo> activities = packageManager.queryIntentActivities(intent, 0);
+                boolean isWhatsAppInstalled = false;
+                boolean isEmailInstalled = false;
+
+                for (ResolveInfo info : activities) {
+                    if (info.activityInfo.packageName.equals("com.whatsapp")) {
+                        isWhatsAppInstalled = true;
+                        intent.setPackage("com.whatsapp");
+                        holder.itemView.getContext().startActivity(intent);
+                        break;
+                    } else if (info.activityInfo.packageName.equals("com.google.android.gm")) {
+                        isEmailInstalled = true;
+                        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                        emailIntent.setType("message/rfc822");
+                        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{""});
+                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "This My Note from E-Mitra Application");
+                        emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+                        holder.itemView.getContext().startActivity(Intent.createChooser(emailIntent, "Send email"));
+                    }
+                }
+
+                if (!isWhatsAppInstalled && !isEmailInstalled) {
+                    holder.itemView.getContext().startActivity(Intent.createChooser(intent, "Share via"));
+                }
+            }
+        });
 
         holder.see.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,7 +181,7 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
 
         ImageView logo;
         MaterialTextView title, description, tag;
-        ImageButton see, edit, delete;
+        ImageButton see, edit, delete, share;
 
 
         public onViewHolder(@NonNull View itemView) {
@@ -151,6 +194,8 @@ public class NotesRecyclerViewAdapter extends FirebaseRecyclerAdapter<NoteDataMo
             see = itemView.findViewById(R.id.see);
             edit = itemView.findViewById(R.id.edit);
             delete = itemView.findViewById(R.id.delete);
+            share = itemView.findViewById(R.id.share);
+
 
         }
     }
