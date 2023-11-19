@@ -17,6 +17,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search">Search</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="done">Done</string>
 
     <string-array name="tags">
         <item>Study</item>

@@ -11,65 +11,65 @@
         android:id="@+id/actionbar"
         layout="@layout/create_note_actionbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                app:cardElevation="5dp"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Title"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/title"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:maxLines="10"
-                            android:textSize="20sp"
-                            android:layout_marginTop="5dp"
-                            android:background="@null"
-                            android:inputType="textMultiLine"/>
+                    <EditText
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                app:cardElevation="5dp"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Write The Notes Here"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayout"
@@ -81,10 +81,10 @@
                             android:id="@+id/note"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:maxLines="10"
-                            android:textSize="15sp"
                             android:background="@null"
-                            android:inputType="textMultiLine"/>
+                            android:inputType="textMultiLine"
+                            android:maxLines="10"
+                            android:textSize="15sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -94,56 +94,96 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PDF : "
                 android:layout_margin="10dp"
-                android:textStyle="bold"/>
+                android:text="PDF : "
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"/>
+                android:layout_margin="10dp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="IMAGE : "
                 android:layout_margin="10dp"
-                android:textStyle="bold"/>
+                android:text="IMAGE : "
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/Image_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"/>
+                android:layout_margin="10dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/remainder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10dp"
+                android:src="@android:drawable/ic_lock_idle_alarm" />
 
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Search"
-                android:drawableLeft="@drawable/search"
                 android:layout_gravity="end"
-                android:layout_margin="10dp"/>
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/search"
+                android:text="Search" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/time"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/time"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/remove" />
+
+            </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
-                app:cardElevation="5dp"
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
-                    android:padding="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Note Tag"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                     <Spinner
                         android:id="@+id/tags"
@@ -151,11 +191,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:spinnerMode="dialog"
-                        android:tooltipText="TAGS"/>
+                        android:tooltipText="TAGS" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
 
 
             <com.google.android.material.button.MaterialButton
@@ -163,10 +202,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:backgroundTint="@color/primary"
                 android:layout_margin="20dp"
-                android:text="Create Note"/>
+                android:backgroundTint="@color/primary"
+                android:gravity="center"
+                android:text="Create Note" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
