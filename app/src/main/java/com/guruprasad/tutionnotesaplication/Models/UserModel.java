@@ -2,7 +2,7 @@ package com.guruprasad.tutionnotesaplication.Models;
 
 public class UserModel {
 
-    private String name , email , password , phone ;
+    private String name , email , password , phone , profile_pic;
 
     public UserModel(String name, String email, String password, String phone) {
         this.name = name;
@@ -44,5 +44,13 @@ public class UserModel {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getProfile_pic() {
+        return profile_pic;
+    }
+
+    public void setProfile_pic(String profile_pic) {
+        this.profile_pic = profile_pic;
     }
 }
