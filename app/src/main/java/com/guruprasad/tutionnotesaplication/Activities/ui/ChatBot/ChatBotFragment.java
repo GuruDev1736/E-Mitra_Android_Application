@@ -6,9 +6,7 @@ import static androidx.core.content.PermissionChecker.checkSelfPermission;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
@@ -39,6 +37,21 @@ public class ChatBotFragment extends Fragment {
         binding = FragmentchatbotBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        WebSettings mywebsettings = binding.webView.getSettings();
+        mywebsettings.setJavaScriptEnabled(true);
+        binding.webView.setWebViewClient(new WebViewClient());
+        binding.webView.loadUrl("https://www.google.com/");
+        binding.webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        binding.webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        binding.webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        mywebsettings.setDomStorageEnabled(true);
+        mywebsettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
+        mywebsettings.setUseWideViewPort(true);
+        mywebsettings.setSavePassword(true);
+        mywebsettings.setSaveFormData(true);
+        mywebsettings.setEnableSmoothTransition(true);
+
+
         binding.search.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetJavaScriptEnabled")
             @Override
@@ -49,23 +62,10 @@ public class ChatBotFragment extends Fragment {
                     binding.etSearch.setError("Please enter the query");
                     return;
                 }
-                WebSettings mywebsettings = binding.webView.getSettings();
-                mywebsettings.setJavaScriptEnabled(true);
-
-                binding.webView.setWebViewClient(new WebViewClient());
                 binding.webView.loadUrl("https://www.google.com/search?q=" + query);
-                binding.webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-                binding.webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-                binding.webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-                mywebsettings.setDomStorageEnabled(true);
-                mywebsettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-                mywebsettings.setUseWideViewPort(true);
-                mywebsettings.setSavePassword(true);
-                mywebsettings.setSaveFormData(true);
-                mywebsettings.setEnableSmoothTransition(true);
+                binding.etSearch.setText(null);
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
-                        checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PermissionChecker.PERMISSION_DENIED) {
+                if (checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PermissionChecker.PERMISSION_DENIED) {
                     requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
                 }
 
@@ -115,18 +115,6 @@ public class ChatBotFragment extends Fragment {
         });
 
         return root;
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 1) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(requireContext(), "Storage permission granted", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(requireContext(), "Storage permission denied", Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 
 

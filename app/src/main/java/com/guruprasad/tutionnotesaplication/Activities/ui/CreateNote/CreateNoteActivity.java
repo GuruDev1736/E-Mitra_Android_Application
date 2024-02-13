@@ -1,12 +1,13 @@
 package com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -53,14 +54,6 @@ import com.guruprasad.tutionnotesaplication.Models.NoteModel;
 import com.guruprasad.tutionnotesaplication.R;
 import com.guruprasad.tutionnotesaplication.Receiver.AlaramReceiver;
 import com.guruprasad.tutionnotesaplication.databinding.ActivityCreateNoteBinding;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -131,29 +124,18 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
         binding.actionbar.files.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Dexter.withContext(CreateNoteActivity.this).withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        .withListener(new MultiplePermissionsListener() {
-                            @Override
-                            public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
 
-                                String title = binding.title.getText().toString();
-                                String content = binding.note.getText().toString();
+                String title = binding.title.getText().toString();
+                String content = binding.note.getText().toString();
 
-                                if (title.isEmpty() || content.isEmpty()) {
-                                    Constants.error(CreateNoteActivity.this, "Please upload your note first");
-                                } else {
-                                    Intent intent = new Intent();
-                                    intent.setType("application/pdf");
-                                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                                    startActivityForResult(Intent.createChooser(intent, "Select the File."), 101);
-                                }
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
-                                permissionToken.continuePermissionRequest();
-                            }
-                        }).check();
+                if (title.isEmpty() || content.isEmpty()) {
+                    Constants.error(CreateNoteActivity.this, "Please upload your note first");
+                } else {
+                    Intent intent = new Intent();
+                    intent.setType("application/pdf");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select the File."), 101);
+                }
             }
         });
 
@@ -174,61 +156,32 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
                     @Override
                     public void onClick(View v) {
 
-                        Dexter.withContext(CreateNoteActivity.this).withPermission(Manifest.permission.CAMERA).withListener(new PermissionListener() {
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
-                                String title = binding.title.getText().toString();
-                                String content = binding.note.getText().toString();
 
-                                if (title.isEmpty() || content.isEmpty()) {
-                                    Constants.error(CreateNoteActivity.this, "Please upload your note first");
-                                } else {
-                                    takePicture(dialog);
-                                }
-                            }
+                        String title = binding.title.getText().toString();
+                        String content = binding.note.getText().toString();
 
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-                                Constants.error(CreateNoteActivity.this, "Camera permission is necessary");
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
-                                permissionToken.continuePermissionRequest();
-                            }
-                        }).check();
+                        if (title.isEmpty() || content.isEmpty()) {
+                            Constants.error(CreateNoteActivity.this, "Please upload your note first");
+                        } else {
+                            takePicture(dialog);
+                        }
                     }
                 });
 
                 gallery.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Dexter.withContext(CreateNoteActivity.this).withPermission(Manifest.permission.READ_EXTERNAL_STORAGE).withListener(new PermissionListener() {
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
-                                String title = binding.title.getText().toString();
-                                String content = binding.note.getText().toString();
 
-                                if (title.isEmpty() || content.isEmpty()) {
-                                    Constants.error(CreateNoteActivity.this, "Please upload your note first");
-                                } else {
-                                    Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                                    startActivityForResult(intent, 112);
-                                    dialog.dismiss();
-                                }
+                        String title = binding.title.getText().toString();
+                        String content = binding.note.getText().toString();
 
-                            }
-
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-                                Constants.error(CreateNoteActivity.this, "Permission is necessary");
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
-                                permissionToken.continuePermissionRequest();
-                            }
-                        }).check();
+                        if (title.isEmpty() || content.isEmpty()) {
+                            Constants.error(CreateNoteActivity.this, "Please upload your note first");
+                        } else {
+                            Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                            startActivityForResult(intent, 112);
+                            dialog.dismiss();
+                        }
                     }
                 });
 
@@ -282,7 +235,7 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
                                     Constants.success(CreateNoteActivity.this, "Note Created Successfully");
-                                    setAlarm();
+                                    //  setAlarm();
                                     binding.create.setVisibility(View.INVISIBLE);
                                     dialog.dismiss();
                                 } else {
@@ -303,6 +256,7 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
                 EditText editText = dialogView.findViewById(R.id.text);
                 ImageButton search = dialogView.findViewById(R.id.search_btn);
                 MaterialButton close = dialogView.findViewById(R.id.close);
+                MaterialButton copy = dialogView.findViewById(R.id.copy);
                 MaterialTextView meaning = dialogView.findViewById(R.id.response);
                 ProgressBar progressBar = dialogView.findViewById(R.id.progressbar);
 
@@ -337,6 +291,18 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
                                         if (query != null) {
                                             Page page = query.getPages().entrySet().iterator().next().getValue();
                                             meaning.setText(page.getExtract());
+
+                                            copy.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View v) {
+                                                    ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                                                    ClipData clipData = ClipData.newPlainText("text", page.getExtract());
+                                                    clipboardManager.setPrimaryClip(clipData);
+                                                    Constants.success(CreateNoteActivity.this, "Copied to clipboard");
+                                                }
+                                            });
+
+
                                             if (meaning.getText().toString().equals("")) {
                                                 Constants.warning(CreateNoteActivity.this, "Information is not available");
                                                 progressBar.setVisibility(View.GONE);
@@ -427,7 +393,7 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
         binding.cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cancelAlaram();
+                //cancelAlaram();
             }
         });
     }

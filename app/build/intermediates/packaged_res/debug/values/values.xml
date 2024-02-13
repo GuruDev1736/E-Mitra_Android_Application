@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="tags">
+        <item>Study</item>
+        <item>Work</item>
+        <item>Personal</item>
+        <item>To-Do</item>
+        <item>Ideas</item>
+        <item>Meetings</item>
+        <item>Shopping</item>
+        <item>Recipes</item>
+        <item>Travel</item>
+        <item>Health</item>
+        <item>Finance</item>
+        <item>Books</item>
+        <item>Movies/TV Shows</item>
+        <item>Hobbies</item>
+        <item>Goals</item>
+        <item>Quotes</item>
+        <item>Miscellaneous</item>
+    </string-array>
+    <color name="accent">#F44336</color>
+    <color name="black">#FF000000</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="gray">#757575</color>
+    <color name="green">#00C500</color>
+    <color name="lavender">#8692f7</color>
+    <color name="primary">#42A5F5</color>
+    <color name="primary_dark">#445DE4</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red">#FF0000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="text_primary">#212121</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="Web">Web</string>
+    <string name="address">Address</string>
+    <string name="app_name">E-Mitra</string>
+    <string name="com.google.firebase.crashlytics.mapping_file_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">00000000000000000000000000000000</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_note">Create Notes</string>
+    <string name="date">Date</string>
+    <string name="default_web_client_id" translatable="false">857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com</string>
+    <string name="done">Done</string>
+    <string name="email">Email</string>
+    <string name="firebase_database_url" translatable="false">https://my-internship-54678-default-rtdb.firebaseio.com</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="full_name">Full Name</string>
+    <string name="gcm_defaultSenderId" translatable="false">857471964997</string>
+    <string name="google_api_key" translatable="false">AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA</string>
+    <string name="google_app_id" translatable="false">1:857471964997:android:7d56f1d0828e2d0049102c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA</string>
+    <string name="google_storage_bucket" translatable="false">my-internship-54678.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="phone_no">Phone No</string>
+    <string name="profile">Profile</string>
+    <string name="project_id" translatable="false">my-internship-54678</string>
+    <string name="search">Search</string>
+    <string name="signup">SignUp</string>
+    <string name="time">Time</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="todo">TODO</string>
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="Base.Theme.TutionNotesAplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/primary</item>
+    </style>
+    <style name="BlueProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/custom_progress_bar</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">10dip</item>
+    </style>
+    <style name="RoundShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="RoundShapeTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="shapeAppearanceMediumComponent">@style/RoundShapeAppearance</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Neutral</item>
+        <item name="android:windowBackground">@drawable/custumdailogbg</item>
+    </style>
+    <style name="Theme.TutionNotesAplication" parent="Base.Theme.TutionNotesAplication"/>
+</resources>

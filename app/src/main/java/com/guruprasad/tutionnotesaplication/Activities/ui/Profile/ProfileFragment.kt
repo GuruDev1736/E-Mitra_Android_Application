@@ -1,7 +1,9 @@
 package com.guruprasad.tutionnotesaplication.Activities.ui.Profile
 
+import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +18,7 @@ import com.guruprasad.tutionnotesaplication.Constants
 import com.guruprasad.tutionnotesaplication.CustomDialog
 import com.guruprasad.tutionnotesaplication.Models.UserModel
 import com.guruprasad.tutionnotesaplication.databinding.FragmentNotificationsBinding
+
 
 class ProfileFragment : Fragment() {
 
@@ -32,6 +35,12 @@ class ProfileFragment : Fragment() {
 
         val pd: CustomDialog = CustomDialog(requireContext())
         pd.show()
+
+
+        binding.profileImage.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(intent, 101)
+        }
 
 
         val listener = object : ValueEventListener {
@@ -79,5 +88,13 @@ class ProfileFragment : Fragment() {
         }
 
         return view
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 101 && resultCode == RESULT_OK && data != null && data.data != null) {
+            val imageUri = data.data
+
+        }
     }
 }

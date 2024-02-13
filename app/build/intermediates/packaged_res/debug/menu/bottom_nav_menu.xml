@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_createNote"
+        android:icon="@drawable/outline_note_24"
+        android:title="@string/create_note" />
+
+    <item
+        android:id="@+id/navigation_chatBot"
+        android:icon="@drawable/search"
+        android:title="@string/Web" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/outline_account_circle_24"
+        android:title="@string/profile" />
+
+</menu>

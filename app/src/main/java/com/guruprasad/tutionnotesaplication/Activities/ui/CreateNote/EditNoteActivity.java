@@ -1,7 +1,9 @@
 package com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote;
 
-import android.Manifest;
 import android.app.AlertDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -14,6 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,6 +31,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textview.MaterialTextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,27 +41,26 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.guruprasad.tutionnotesaplication.API.ApiInterface;
+import com.guruprasad.tutionnotesaplication.API.ApiUtilities;
 import com.guruprasad.tutionnotesaplication.Adapters.EditImageAdapter;
 import com.guruprasad.tutionnotesaplication.Adapters.EditNoteRecyclerAdapter;
 import com.guruprasad.tutionnotesaplication.Constants;
 import com.guruprasad.tutionnotesaplication.CustomDialog;
+import com.guruprasad.tutionnotesaplication.Models.ApiModel.Page;
+import com.guruprasad.tutionnotesaplication.Models.ApiModel.WikipediaResponse;
 import com.guruprasad.tutionnotesaplication.Models.ImageDataModel;
 import com.guruprasad.tutionnotesaplication.Models.NoteDataModel;
 import com.guruprasad.tutionnotesaplication.R;
 import com.guruprasad.tutionnotesaplication.databinding.ActivityEditNoteBinding;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
-import java.util.List;
 import java.util.UUID;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class EditNoteActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -89,6 +94,7 @@ public class EditNoteActivity extends AppCompatActivity implements AdapterView.O
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
         storage = FirebaseStorage.getInstance();
+        ApiInterface apiInterface = ApiUtilities.INSTANCE.getinstance().create(ApiInterface.class);
 
         Intent intent = getIntent();
         String noteId = intent.getStringExtra("noteId");
@@ -180,6 +186,8 @@ public class EditNoteActivity extends AppCompatActivity implements AdapterView.O
 
                     dialog.dismiss();
                 }
+
+
             }
 
             @Override
@@ -197,29 +205,18 @@ public class EditNoteActivity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View view) {
 
-                Dexter.withContext(EditNoteActivity.this).withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        .withListener(new MultiplePermissionsListener() {
-                            @Override
-                            public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
 
-                                String title = binding.title.getText().toString();
-                                String content = binding.note.getText().toString();
+                String title = binding.title.getText().toString();
+                String content = binding.note.getText().toString();
 
-                                if (title.isEmpty() || content.isEmpty()) {
-                                    Constants.error(EditNoteActivity.this, "Cannot Update file on empty note");
-                                } else {
-                                    Intent intent = new Intent();
-                                    intent.setType("application/pdf");
-                                    intent.setAction(Intent.ACTION_GET_CONTENT);
-                                    startActivityForResult(Intent.createChooser(intent, "Select the File."), 101);
-                                }
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
-                                permissionToken.continuePermissionRequest();
-                            }
-                        }).check();
+                if (title.isEmpty() || content.isEmpty()) {
+                    Constants.error(EditNoteActivity.this, "Cannot Update file on empty note");
+                } else {
+                    Intent intent = new Intent();
+                    intent.setType("application/pdf");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select the File."), 101);
+                }
             }
         });
 
@@ -249,61 +246,31 @@ public class EditNoteActivity extends AppCompatActivity implements AdapterView.O
                     @Override
                     public void onClick(View v) {
 
-                        Dexter.withContext(EditNoteActivity.this).withPermission(Manifest.permission.CAMERA).withListener(new PermissionListener() {
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
-                                String title = binding.title.getText().toString();
-                                String content = binding.note.getText().toString();
+                        String title = binding.title.getText().toString();
+                        String content = binding.note.getText().toString();
 
-                                if (title.isEmpty() || content.isEmpty()) {
-                                    Constants.error(EditNoteActivity.this, "Cannot Update file on empty note");
-                                } else {
-                                    takePicture(dialog);
-                                }
-                            }
-
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-                                Constants.error(EditNoteActivity.this, "Camera permission is necessary");
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
-                                permissionToken.continuePermissionRequest();
-                            }
-                        }).check();
+                        if (title.isEmpty() || content.isEmpty()) {
+                            Constants.error(EditNoteActivity.this, "Cannot Update file on empty note");
+                        } else {
+                            takePicture(dialog);
+                        }
                     }
                 });
 
                 gallery.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Dexter.withContext(EditNoteActivity.this).withPermission(Manifest.permission.READ_EXTERNAL_STORAGE).withListener(new PermissionListener() {
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
-                                String title = binding.title.getText().toString();
-                                String content = binding.note.getText().toString();
 
-                                if (title.isEmpty() || content.isEmpty()) {
-                                    Constants.error(EditNoteActivity.this, "Cannot Update file on empty note");
-                                } else {
-                                    Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                                    startActivityForResult(intent, 112);
-                                    dialog.dismiss();
-                                }
+                        String title = binding.title.getText().toString();
+                        String content = binding.note.getText().toString();
 
-                            }
-
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-                                Constants.error(EditNoteActivity.this, "Permission is necessary");
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
-                                permissionToken.continuePermissionRequest();
-                            }
-                        }).check();
+                        if (title.isEmpty() || content.isEmpty()) {
+                            Constants.error(EditNoteActivity.this, "Cannot Update file on empty note");
+                        } else {
+                            Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                            startActivityForResult(intent, 112);
+                            dialog.dismiss();
+                        }
                     }
                 });
 
@@ -349,6 +316,99 @@ public class EditNoteActivity extends AppCompatActivity implements AdapterView.O
             }
         };
         binding.imageRecview.setAdapter(imageAdapter);
+
+
+        binding.search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View dialogView = LayoutInflater.from(EditNoteActivity.this).inflate(R.layout.searchdialog, null);
+
+                EditText editText = dialogView.findViewById(R.id.text);
+                ImageButton search = dialogView.findViewById(R.id.search_btn);
+                MaterialButton close = dialogView.findViewById(R.id.close);
+                MaterialButton copy = dialogView.findViewById(R.id.copy);
+                MaterialTextView meaning = dialogView.findViewById(R.id.response);
+                ProgressBar progressBar = dialogView.findViewById(R.id.progressbar);
+
+
+                AlertDialog dialog = new AlertDialog.Builder(EditNoteActivity.this)
+                        .setView(dialogView)
+                        .create();
+
+                search.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        if (editText.getText().toString().isEmpty()) {
+                            Constants.error(EditNoteActivity.this, "Please enter the word to search");
+                            return;
+                        }
+
+                        progressBar.setVisibility(View.VISIBLE);
+                        search.setVisibility(View.GONE);
+
+                        String data = editText.getText().toString();
+
+                        Call<WikipediaResponse> call = apiInterface.getPageSummary("query", "json", "extracts", 1, 1, data);
+                        call.enqueue(new Callback<WikipediaResponse>() {
+                            @Override
+                            public void onResponse(Call<WikipediaResponse> call, Response<WikipediaResponse> response) {
+                                if (response.isSuccessful()) {
+                                    WikipediaResponse wikipediaResponse = response.body();
+
+                                    if (wikipediaResponse != null) {
+                                        com.guruprasad.tutionnotesaplication.Models.ApiModel.Query query = wikipediaResponse.getQuery();
+                                        if (query != null) {
+                                            Page page = query.getPages().entrySet().iterator().next().getValue();
+                                            meaning.setText(page.getExtract());
+
+                                            copy.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View v) {
+                                                    ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                                                    ClipData clipData = ClipData.newPlainText("text", page.getExtract());
+                                                    clipboardManager.setPrimaryClip(clipData);
+                                                    Constants.success(EditNoteActivity.this, "Copied to clipboard");
+                                                }
+                                            });
+
+
+                                            if (meaning.getText().toString().equals("")) {
+                                                Constants.warning(EditNoteActivity.this, "Information is not available");
+                                                progressBar.setVisibility(View.GONE);
+                                                search.setVisibility(View.VISIBLE);
+                                                return;
+                                            }
+                                            progressBar.setVisibility(View.GONE);
+                                            search.setVisibility(View.VISIBLE);
+                                        }
+                                    }
+                                } else {
+                                    Constants.error(EditNoteActivity.this, "Failed to get the response");
+                                    progressBar.setVisibility(View.GONE);
+                                    search.setVisibility(View.VISIBLE);
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<WikipediaResponse> call, Throwable t) {
+                                Constants.error(EditNoteActivity.this, "Please check the network connection");
+                                progressBar.setVisibility(View.GONE);
+                                search.setVisibility(View.VISIBLE);
+                            }
+                        });
+                    }
+                });
+
+                close.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
 
 
         binding.update.setOnClickListener(new View.OnClickListener() {

@@ -1,32 +1,28 @@
 package com.guruprasad.tutionnotesaplication.Activities;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.guruprasad.tutionnotesaplication.Activities.Authentication.LoginActivity;
-import com.guruprasad.tutionnotesaplication.Constants;
 import com.guruprasad.tutionnotesaplication.databinding.ActivityMainBinding;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.permissionx.guolindev.PermissionX;
+import com.permissionx.guolindev.callback.RequestCallback;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding ;
+    ActivityMainBinding binding;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,50 +30,36 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        auth = FirebaseAuth.getInstance();
+
         new Handler().postDelayed(new Runnable() {
             @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
             @Override
             public void run() {
+                PermissionX.init(MainActivity.this)
+                        .permissions(Manifest.permission.CAMERA, Manifest.permission.POST_NOTIFICATIONS, Manifest.permission.CALL_PHONE)
+                        .request(new RequestCallback() {
+                            @Override
+                            public void onResult(boolean allGranted, List<String> grantedList, List<String> deniedList) {
+                                if (allGranted) {
+                                    FirebaseUser user = auth.getCurrentUser();
+                                    if (user != null) {
+                                        startActivity(new Intent(MainActivity.this, NavigationActivity.class));
+                                        finish();
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "All permissions are granted", Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                                        finish();
+                                    }
 
-                if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_NETWORK_STATE) == PackageManager.PERMISSION_GRANTED
-                        && ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
-                        ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED &&
-                        ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED &&
-                        ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED &&
-                        ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-
-                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                    finish();
-
-                } else {
-                    String[] permissions = {
-                            Manifest.permission.ACCESS_NETWORK_STATE,
-                            Manifest.permission.READ_EXTERNAL_STORAGE,
-                            Manifest.permission.INTERNET,
-                            Manifest.permission.CALL_PHONE,
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                            Manifest.permission.POST_NOTIFICATIONS
-                    };
-                    ActivityCompat.requestPermissions(MainActivity.this, permissions, 101);
-
-                }
+                                } else {
+                                    Toast.makeText(MainActivity.this, "These permissions are denied: " + deniedList, Toast.LENGTH_LONG).show();
+                                    finish();
+                                }
+                            }
+                        });
             }
         }, 1000);
-    }
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 101) {
-            for (int i = 0; i < permissions.length; i++) {
-                String permission = permissions[i];
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                    finish();
-                }
-            }
-        }
     }
 }
 
