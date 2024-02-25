@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_createNote"
-        android:name="com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.CreateNoteFragment"
+        android:name="com.emitra.tutionnotesaplication.Activities.ui.CreateNote.CreateNoteFragment"
         android:label="@string/create_note"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_chatBot"
-        android:name="com.guruprasad.tutionnotesaplication.Activities.ui.ChatBot.ChatBotFragment"
+        android:name="com.emitra.tutionnotesaplication.Activities.ui.ChatBot.ChatBotFragment"
         android:label="@string/Web"
         tools:layout="@layout/fragmentchatbot" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.guruprasad.tutionnotesaplication.Activities.ui.Profile.ProfileFragment"
+        android:name="com.emitra.tutionnotesaplication.Activities.ui.Profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

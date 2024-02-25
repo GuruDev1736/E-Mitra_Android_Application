@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-66:/values-lo/values-lo.xml",
+            "outputFile": "com.emitra.tutionnotesaplication.app-mergeDebugResources-66:/values-lo/values-lo.xml",
             "map": [
                 {
                     "source": "/home/gurudev/.gradle/caches/transforms-3/3004927005225bf1a5c748a579c8b53b/transformed/play-services-base-18.1.0/res/values-lo/values.xml",

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-74:12
-INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-74:12
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:1-75:12
 MERGED from [com.guolindev.permissionx:permissionx:1.7.1] /home/gurudev/.gradle/caches/transforms-3/f81da83f7f9e20eb05ca2a6f944abf09/transformed/permissionx-1.7.1/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] /home/gurudev/.gradle/caches/transforms-3/058c92171b4a767180018a0827f689af/transformed/viewbinding-8.2.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:2:1-24:12
@@ -133,29 +133,30 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/gurudev/.g
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /home/gurudev/.gradle/caches/transforms-3/09c4bbe919faaa5ac027a5c74274f1ae/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] /home/gurudev/.gradle/caches/transforms-3/0794257b899a34c1ed1756bd3069773a/transformed/rxandroid-2.0.2/AndroidManifest.xml:15:1-21:12
 	package
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:3:5-47
 		INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:3:5-51
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:4:5-51
 	android:versionCode
 		INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:2:11-69
 uses-feature#android.hardware.camera
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:5:5-7:36
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:6:5-8:36
 	android:required
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:7:9-33
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:8:9-33
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:6:9-47
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:7:9-47
 uses-feature#android.hardware.telephony
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:8:5-10:36
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:9:5-11:36
 	android:required
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:10:9-33
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:11:9-33
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:9:9-50
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:10:9-50
 uses-permission#android.permission.INTERNET
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:12:5-67
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:5-67
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:13:5-67
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:13:5-67
 MERGED from [com.firebaseui:firebase-ui-database:8.0.2] /home/gurudev/.gradle/caches/transforms-3/a9dcb7d3c17fa81aa3259539fdc24ad9/transformed/firebase-ui-database-8.0.2/AndroidManifest.xml:9:5-67
@@ -193,50 +194,50 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.5.1] /h
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /home/gurudev/.gradle/caches/transforms-3/79f80c1e93919a4c640c8cf483553786/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:25:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /home/gurudev/.gradle/caches/transforms-3/79f80c1e93919a4c640c8cf483553786/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:25:5-67
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:12:22-64
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:22-64
 uses-permission#android.permission.CAMERA
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:5-65
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:14:5-65
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:22-62
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:14:22-62
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:14:5-17:40
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:15:5-18:40
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:11:5-81
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:11:5-81
 	android:maxSdkVersion
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:17:9-35
 	tools:ignore
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:17:9-37
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:18:9-37
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:15:9-65
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:16:9-65
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:18:5-20:38
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:19:5-21:38
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:12:5-80
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:12:5-80
 	android:maxSdkVersion
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:21:9-35
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:19:9-64
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:20:9-64
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:22:5-77
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:5-77
 MERGED from [com.google.firebase:firebase-messaging:23.4.1] /home/gurudev/.gradle/caches/transforms-3/1cd880d6b9d990355a337338e21c390d/transformed/firebase-messaging-23.4.1/AndroidManifest.xml:23:5-77
 MERGED from [com.google.firebase:firebase-messaging:23.4.1] /home/gurudev/.gradle/caches/transforms-3/1cd880d6b9d990355a337338e21c390d/transformed/firebase-messaging-23.4.1/AndroidManifest.xml:23:5-77
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:22:22-74
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:22-74
 uses-permission#android.permission.CALL_PHONE
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:5-69
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:5-69
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:22-66
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:22-66
 uses-permission#com.android.alarm.permission.SET_ALARM
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:5-78
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:5-78
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:22-75
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:22-75
 uses-permission#android.permission.VIBRATE
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:5-66
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:26:5-66
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:22-63
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:26:22-63
 application
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:28:5-73:19
-INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:28:5-73:19
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:29:5-74:19
+INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:29:5-74:19
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:18:5-22:19
 MERGED from [com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:18:5-22:19
 MERGED from [com.google.android.material:material:1.11.0] /home/gurudev/.gradle/caches/transforms-3/d1c8545acf4d82ce8c120b962e717ee4/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
@@ -344,89 +345,89 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/gurud
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:36:9-35
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:37:9-35
 	android:label
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:34:9-41
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:35:9-41
 	android:fullBackupContent
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:32:9-54
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:33:9-54
 	android:roundIcon
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:35:9-45
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:36:9-45
 	tools:targetApi
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:38:9-35
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:39:9-35
 	android:icon
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:33:9-40
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:34:9-40
 	android:allowBackup
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:29:9-35
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:30:9-35
 	android:theme
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:37:9-59
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:38:9-59
 	android:enableOnBackInvokedCallback
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:31:9-51
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:32:9-51
 	android:dataExtractionRules
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:30:9-65
-activity#com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.EditNoteActivity
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:39:9-41:40
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:31:9-65
+activity#com.emitra.tutionnotesaplication.Activities.ui.CreateNote.EditNoteActivity
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:40:9-42:40
 	android:exported
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:41:13-37
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:40:13-70
-activity#com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.SeeNoteActivity
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:42:9-44:40
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:41:13-70
+activity#com.emitra.tutionnotesaplication.Activities.ui.CreateNote.SeeNoteActivity
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:43:9-45:40
 	android:exported
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:44:13-37
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:43:13-69
-activity#com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.CreateNoteActivity
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:45:9-47:40
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:44:13-69
+activity#com.emitra.tutionnotesaplication.Activities.ui.CreateNote.CreateNoteActivity
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:46:9-48:40
 	android:exported
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:47:13-37
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:46:13-72
-activity#com.guruprasad.tutionnotesaplication.Activities.NavigationActivity
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:48:9-51:65
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:47:13-72
+activity#com.emitra.tutionnotesaplication.Activities.NavigationActivity
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:49:9-52:65
 	android:label
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:51:13-62
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:52:13-62
 	android:exported
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:50:13-37
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:49:13-58
-activity#com.guruprasad.tutionnotesaplication.Activities.Authentication.SignUpActivity
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:52:9-54:40
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:50:13-58
+activity#com.emitra.tutionnotesaplication.Activities.Authentication.SignUpActivity
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:53:9-55:40
 	android:exported
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:54:13-37
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:53:13-69
-activity#com.guruprasad.tutionnotesaplication.Activities.Authentication.LoginActivity
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:55:9-57:40
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:54:13-69
+activity#com.emitra.tutionnotesaplication.Activities.Authentication.LoginActivity
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:56:9-58:40
 	android:exported
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:57:13-37
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:58:13-37
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:56:13-68
-activity#com.guruprasad.tutionnotesaplication.Activities.MainActivity
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:58:9-66:20
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:57:13-68
+activity#com.emitra.tutionnotesaplication.Activities.MainActivity
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:59:9-67:20
 	android:exported
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:60:13-36
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:61:13-36
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:59:13-52
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:60:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:61:13-65:29
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:62:13-66:29
 action#android.intent.action.MAIN
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:62:17-69
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:63:17-69
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:62:25-66
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:63:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:64:17-77
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:65:17-77
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:64:27-74
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:65:27-74
 meta-data#firebase_performance_logcat_enabled
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:68:9-70:36
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:69:9-71:36
 	android:value
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:70:13-33
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:71:13-33
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:69:13-63
-receiver#com.guruprasad.tutionnotesaplication.Receiver.AlaramReceiver
-ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:72:9-61
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:70:13-63
+receiver#com.emitra.tutionnotesaplication.Receiver.AlaramReceiver
+ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:73:9-61
 	android:name
-		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:72:19-58
+		ADDED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:73:19-58
 uses-sdk
 INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml
@@ -1213,7 +1214,7 @@ ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/
 		ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
-permission#com.guruprasad.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.emitra.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
@@ -1223,7 +1224,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
-uses-permission#com.guruprasad.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.emitra.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:26:22-94

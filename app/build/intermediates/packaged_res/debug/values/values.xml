@@ -45,23 +45,22 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="create_note">Create Notes</string>
     <string name="date">Date</string>
-    <string name="default_web_client_id" translatable="false">857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com</string>
     <string name="done">Done</string>
     <string name="email">Email</string>
-    <string name="firebase_database_url" translatable="false">https://my-internship-54678-default-rtdb.firebaseio.com</string>
+    <string name="firebase_database_url" translatable="false">https://e-mitra-90c2c-default-rtdb.firebaseio.com</string>
     <string name="forgot_password">Forgot Password ?</string>
     <string name="full_name">Full Name</string>
-    <string name="gcm_defaultSenderId" translatable="false">857471964997</string>
-    <string name="google_api_key" translatable="false">AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA</string>
-    <string name="google_app_id" translatable="false">1:857471964997:android:7d56f1d0828e2d0049102c</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA</string>
-    <string name="google_storage_bucket" translatable="false">my-internship-54678.appspot.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">279497909418</string>
+    <string name="google_api_key" translatable="false">AIzaSyBVbCk-YiMf1X4gdFQ2h8lNgdQO_PutWPQ</string>
+    <string name="google_app_id" translatable="false">1:279497909418:android:a41d690790bf05683c9cd3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBVbCk-YiMf1X4gdFQ2h8lNgdQO_PutWPQ</string>
+    <string name="google_storage_bucket" translatable="false">e-mitra-90c2c.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="phone_no">Phone No</string>
     <string name="profile">Profile</string>
-    <string name="project_id" translatable="false">my-internship-54678</string>
+    <string name="project_id" translatable="false">e-mitra-90c2c</string>
     <string name="search">Search</string>
     <string name="signup">SignUp</string>
     <string name="time">Time</string>

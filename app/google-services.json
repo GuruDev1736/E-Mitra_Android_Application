@@ -1,264 +1,27 @@
 {
   "project_info": {
-    "project_number": "857471964997",
-    "firebase_url": "https://my-internship-54678-default-rtdb.firebaseio.com",
-    "project_id": "my-internship-54678",
-    "storage_bucket": "my-internship-54678.appspot.com"
+    "project_number": "279497909418",
+    "firebase_url": "https://e-mitra-90c2c-default-rtdb.firebaseio.com",
+    "project_id": "e-mitra-90c2c",
+    "storage_bucket": "e-mitra-90c2c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:7864c05b8847d67649102c",
+        "mobilesdk_app_id": "1:279497909418:android:a41d690790bf05683c9cd3",
         "android_client_info": {
-          "package_name": "com.example.attend"
+          "package_name": "com.emitra.tutionnotesaplication"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-cliag4c6ar2mi5l62kiqei908bvqjb69.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.attend",
-            "certificate_hash": "768689d444177b6fcf38946156e419d61c68dc64"
-          }
-        },
-        {
-          "client_id": "857471964997-q9d332c8o5eu4rbstb3p2tf6mcp2vla3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.attend",
-            "certificate_hash": "127619d9e08ca983a26cadfc635bfabe49359948"
-          }
-        },
-        {
-          "client_id": "857471964997-tun900a01v9fkf9182bisv8mgk3p92gi.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.attend",
-            "certificate_hash": "36fd3bebce7c5dc589b07246a414b61e23c12ca4"
-          }
-        },
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
+          "current_key": "AIzaSyBVbCk-YiMf1X4gdFQ2h8lNgdQO_PutWPQ"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:2071109d386edcec49102c",
-        "android_client_info": {
-          "package_name": "com.example.e_mitra"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:2dfc2cb69ef2544249102c",
-        "android_client_info": {
-          "package_name": "com.example.myinternship"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:a5bb631ea79a6a6349102c",
-        "android_client_info": {
-          "package_name": "com.guruprasad.callrecorder"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:dd6cdd06b1bb82c749102c",
-        "android_client_info": {
-          "package_name": "com.guruprasad.myapplication"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:caf43d827416fa4849102c",
-        "android_client_info": {
-          "package_name": "com.guruprasad.teacherattend"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:37ae9e434ac167d349102c",
-        "android_client_info": {
-          "package_name": "com.guruprasad.tranning1"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:857471964997:android:7d56f1d0828e2d0049102c",
-        "android_client_info": {
-          "package_name": "com.guruprasad.tutionnotesaplication"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDq_kJLWnG9oLpBSoDJojdCiL7Gh85fEnA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "857471964997-nfo39gggpvhp970eedb1uidkgsuk03em.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

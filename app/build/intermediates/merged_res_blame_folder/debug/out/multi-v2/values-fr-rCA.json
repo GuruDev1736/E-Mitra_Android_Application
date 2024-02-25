@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-66:/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "com.emitra.tutionnotesaplication.app-mergeDebugResources-66:/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "/home/gurudev/.gradle/caches/transforms-3/48054ec90eed9ed6aaa379c0fa43862e/transformed/browser-1.4.0/res/values-fr-rCA/values-fr-rCA.xml",

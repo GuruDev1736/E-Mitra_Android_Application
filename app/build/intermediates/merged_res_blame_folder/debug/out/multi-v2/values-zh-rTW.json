@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-66:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.emitra.tutionnotesaplication.app-mergeDebugResources-66:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "/home/gurudev/.gradle/caches/transforms-3/44067e31280ff5d12bfc8a88a13d59b5/transformed/navigation-ui-2.7.7/res/values-zh-rTW/values-zh-rTW.xml",

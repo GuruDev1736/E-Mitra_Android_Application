@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-66:/values-v24/values-v24.xml",
+            "outputFile": "com.emitra.tutionnotesaplication.app-mergeDebugResources-66:/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/home/gurudev/.gradle/caches/transforms-3/5c831cb76160f777d06bcf554d968e5d/transformed/media-1.0.0/res/values-v24/values-v24.xml",

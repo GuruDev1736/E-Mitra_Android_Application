@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-66:/values-iw/values-iw.xml",
+            "outputFile": "com.emitra.tutionnotesaplication.app-mergeDebugResources-66:/values-iw/values-iw.xml",
             "map": [
                 {
                     "source": "/home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/res/values-iw/values-iw.xml",

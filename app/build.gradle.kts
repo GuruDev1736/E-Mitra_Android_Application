@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.guruprasad.tutionnotesaplication"
+    namespace = "com.emitra.tutionnotesaplication"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.guruprasad.tutionnotesaplication"
+        applicationId = "com.emitra.tutionnotesaplication"
         minSdk = 24
         targetSdk = 34
         versionCode = 2

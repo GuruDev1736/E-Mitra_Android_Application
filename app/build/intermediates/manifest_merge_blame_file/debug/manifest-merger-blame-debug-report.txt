@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.guruprasad.tutionnotesaplication"
+3    package="com.emitra.tutionnotesaplication"
 4    android:versionCode="2"
 5    android:versionName="1.0" >
 6
@@ -9,48 +9,48 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-feature
-11-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:5:5-7:36
+11-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:6:5-8:36
 12        android:name="android.hardware.camera"
-12-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:6:9-47
+12-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:7:9-47
 13        android:required="false" />
-13-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:7:9-33
+13-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:8:9-33
 14    <uses-feature
-14-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:8:5-10:36
+14-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:9:5-11:36
 15        android:name="android.hardware.telephony"
-15-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:9:9-50
+15-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:10:9-50
 16        android:required="false" />
-16-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:10:9-33
+16-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:11:9-33
 17
 18    <uses-permission android:name="android.permission.INTERNET" />
-18-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:12:5-67
-18-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:12:22-64
+18-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:5-67
+18-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:22-64
 19    <uses-permission android:name="android.permission.CAMERA" />
-19-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:5-65
-19-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:13:22-62
+19-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:14:5-65
+19-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:14:22-62
 20    <uses-permission
-20-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:14:5-17:40
+20-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:15:5-18:40
 21        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-21-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:15:9-65
+21-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:16:9-65
 22        android:maxSdkVersion="32" />
-22-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:16:9-35
+22-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:17:9-35
 23    <uses-permission
-23-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:18:5-20:38
+23-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:19:5-21:38
 24        android:name="android.permission.READ_EXTERNAL_STORAGE"
-24-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:19:9-64
+24-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:20:9-64
 25        android:maxSdkVersion="32" />
-25-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:20:9-35
+25-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:21:9-35
 26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-26-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:22:5-77
-26-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:22:22-74
+26-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:5-77
+26-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:22-74
 27    <uses-permission android:name="android.permission.CALL_PHONE" />
-27-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:5-69
-27-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:23:22-66
+27-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:5-69
+27-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:22-66
 28    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-28-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:5-78
-28-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:24:22-75
+28-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:5-78
+28-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:22-75
 29    <uses-permission android:name="android.permission.VIBRATE" />
-29-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:5-66
-29-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:25:22-63
+29-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:26:5-66
+29-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:26:22-63
 30    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 30-->[com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:14:5-80
 30-->[com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:14:22-77
@@ -99,108 +99,108 @@
 49
 50    <permission
 50-->[androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
-51        android:name="com.guruprasad.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+51        android:name="com.emitra.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 51-->[androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
 52        android:protectionLevel="signature" />
 52-->[androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 53
-54    <uses-permission android:name="com.guruprasad.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+54    <uses-permission android:name="com.emitra.tutionnotesaplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 54-->[androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
 54-->[androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 55
 56    <application
-56-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:28:5-73:19
+56-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:29:5-74:19
 57        android:allowBackup="true"
-57-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:29:9-35
+57-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:30:9-35
 58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 58-->[androidx.core:core:1.9.0] /home/gurudev/.gradle/caches/transforms-3/d7fa149288c8233171adc1ab31f87125/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 59        android:dataExtractionRules="@xml/data_extraction_rules"
-59-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:30:9-65
+59-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:31:9-65
 60        android:debuggable="true"
 61        android:enableOnBackInvokedCallback="true"
-61-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:31:9-51
+61-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:32:9-51
 62        android:extractNativeLibs="false"
 63        android:fullBackupContent="@xml/backup_rules"
-63-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:32:9-54
+63-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:33:9-54
 64        android:icon="@mipmap/notelogo"
-64-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:33:9-40
+64-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:34:9-40
 65        android:label="@string/app_name"
-65-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:34:9-41
+65-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:35:9-41
 66        android:requestLegacyExternalStorage="true"
 66-->[com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:18:18-61
 67        android:roundIcon="@mipmap/notelogo"
-67-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:35:9-45
+67-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:36:9-45
 68        android:supportsRtl="true"
-68-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:36:9-35
+68-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:37:9-35
 69        android:testOnly="true"
 70        android:theme="@style/Theme.TutionNotesAplication" >
-70-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:37:9-59
+70-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:38:9-59
 71        <activity
-71-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:39:9-41:40
-72            android:name="com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.EditNoteActivity"
-72-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:40:13-70
+71-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:40:9-42:40
+72            android:name="com.emitra.tutionnotesaplication.Activities.ui.CreateNote.EditNoteActivity"
+72-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:41:13-70
 73            android:exported="false" />
-73-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:41:13-37
+73-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:42:13-37
 74        <activity
-74-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:42:9-44:40
-75            android:name="com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.SeeNoteActivity"
-75-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:43:13-69
+74-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:43:9-45:40
+75            android:name="com.emitra.tutionnotesaplication.Activities.ui.CreateNote.SeeNoteActivity"
+75-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:44:13-69
 76            android:exported="false" />
-76-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:44:13-37
+76-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:45:13-37
 77        <activity
-77-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:45:9-47:40
-78            android:name="com.guruprasad.tutionnotesaplication.Activities.ui.CreateNote.CreateNoteActivity"
-78-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:46:13-72
+77-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:46:9-48:40
+78            android:name="com.emitra.tutionnotesaplication.Activities.ui.CreateNote.CreateNoteActivity"
+78-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:47:13-72
 79            android:exported="false" />
-79-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:47:13-37
+79-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:48:13-37
 80        <activity
-80-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:48:9-51:65
-81            android:name="com.guruprasad.tutionnotesaplication.Activities.NavigationActivity"
-81-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:49:13-58
+80-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:49:9-52:65
+81            android:name="com.emitra.tutionnotesaplication.Activities.NavigationActivity"
+81-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:50:13-58
 82            android:exported="false"
-82-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:50:13-37
+82-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:51:13-37
 83            android:label="@string/title_activity_navigation" />
-83-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:51:13-62
+83-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:52:13-62
 84        <activity
-84-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:52:9-54:40
-85            android:name="com.guruprasad.tutionnotesaplication.Activities.Authentication.SignUpActivity"
-85-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:53:13-69
+84-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:53:9-55:40
+85            android:name="com.emitra.tutionnotesaplication.Activities.Authentication.SignUpActivity"
+85-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:54:13-69
 86            android:exported="false" />
-86-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:54:13-37
+86-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:55:13-37
 87        <activity
-87-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:55:9-57:40
-88            android:name="com.guruprasad.tutionnotesaplication.Activities.Authentication.LoginActivity"
-88-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:56:13-68
+87-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:56:9-58:40
+88            android:name="com.emitra.tutionnotesaplication.Activities.Authentication.LoginActivity"
+88-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:57:13-68
 89            android:exported="false" />
-89-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:57:13-37
+89-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:58:13-37
 90        <activity
-90-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:58:9-66:20
-91            android:name="com.guruprasad.tutionnotesaplication.Activities.MainActivity"
-91-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:59:13-52
+90-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:59:9-67:20
+91            android:name="com.emitra.tutionnotesaplication.Activities.MainActivity"
+91-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:60:13-52
 92            android:exported="true" >
-92-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:60:13-36
+92-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:61:13-36
 93            <intent-filter>
-93-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:61:13-65:29
+93-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:62:13-66:29
 94                <action android:name="android.intent.action.MAIN" />
-94-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:62:17-69
-94-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:62:25-66
+94-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:63:17-69
+94-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:63:25-66
 95
 96                <category android:name="android.intent.category.LAUNCHER" />
-96-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:64:17-77
-96-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:64:27-74
+96-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:65:17-77
+96-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:65:27-74
 97            </intent-filter>
 98        </activity>
 99
 100        <meta-data
-100-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:68:9-70:36
+100-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:69:9-71:36
 101            android:name="firebase_performance_logcat_enabled"
-101-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:69:13-63
+101-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:70:13-63
 102            android:value="true" />
-102-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:70:13-33
+102-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:71:13-33
 103
-104        <receiver android:name="com.guruprasad.tutionnotesaplication.Receiver.AlaramReceiver" />
-104-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:72:9-61
-104-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:72:19-58
+104        <receiver android:name="com.emitra.tutionnotesaplication.Receiver.AlaramReceiver" />
+104-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:73:9-61
+104-->/run/media/gurudev/APP/E-Mitra/app/src/main/AndroidManifest.xml:73:19-58
 105
 106        <activity
 106-->[com.github.afreakyelf:Pdf-Viewer:v1.0.7] /home/gurudev/.gradle/caches/transforms-3/93042a04f4972ebdab5eb58729f56adc/transformed/Pdf-Viewer-v1.0.7/AndroidManifest.xml:19:9-21:66
@@ -529,7 +529,7 @@
 277-->[com.google.firebase:firebase-common:20.4.2] /home/gurudev/.gradle/caches/transforms-3/0eb82803e8179c8ba8edcf36c98e6ad8/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
 278            android:name="com.google.firebase.provider.FirebaseInitProvider"
 278-->[com.google.firebase:firebase-common:20.4.2] /home/gurudev/.gradle/caches/transforms-3/0eb82803e8179c8ba8edcf36c98e6ad8/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
-279            android:authorities="com.guruprasad.tutionnotesaplication.firebaseinitprovider"
+279            android:authorities="com.emitra.tutionnotesaplication.firebaseinitprovider"
 279-->[com.google.firebase:firebase-common:20.4.2] /home/gurudev/.gradle/caches/transforms-3/0eb82803e8179c8ba8edcf36c98e6ad8/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
 280            android:directBootAware="true"
 280-->[com.google.firebase:firebase-common:20.4.2] /home/gurudev/.gradle/caches/transforms-3/0eb82803e8179c8ba8edcf36c98e6ad8/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
@@ -594,7 +594,7 @@
 313-->[androidx.emoji2:emoji2:1.2.0] /home/gurudev/.gradle/caches/transforms-3/8f11d826a02d6c2e6c40af279485a009/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
 314            android:name="androidx.startup.InitializationProvider"
 314-->[androidx.emoji2:emoji2:1.2.0] /home/gurudev/.gradle/caches/transforms-3/8f11d826a02d6c2e6c40af279485a009/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-315            android:authorities="com.guruprasad.tutionnotesaplication.androidx-startup"
+315            android:authorities="com.emitra.tutionnotesaplication.androidx-startup"
 315-->[androidx.emoji2:emoji2:1.2.0] /home/gurudev/.gradle/caches/transforms-3/8f11d826a02d6c2e6c40af279485a009/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
 316            android:exported="false" >
 316-->[androidx.emoji2:emoji2:1.2.0] /home/gurudev/.gradle/caches/transforms-3/8f11d826a02d6c2e6c40af279485a009/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37

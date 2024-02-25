@@ -1,4 +1,4 @@
-com.guruprasad.tutionnotesaplication
+com.emitra.tutionnotesaplication
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -4248,7 +4248,6 @@ string content_des
 string copy_toast_msg
 string create_note
 string date
-string default_web_client_id
 string dest_title
 string done
 string email

@@ -96,6 +96,7 @@ id gallery
 id home
 id image
 id image_recview
+id layout
 id logo
 id logout
 id mobile_navigation
@@ -171,7 +172,6 @@ string com.google.firebase.crashlytics.mapping_file_id
 string confirm_password
 string create_note
 string date
-string default_web_client_id
 string done
 string email
 string firebase_database_url

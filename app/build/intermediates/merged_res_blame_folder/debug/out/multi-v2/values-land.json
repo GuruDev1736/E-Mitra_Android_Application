@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-66:/values-land/values-land.xml",
+            "outputFile": "com.emitra.tutionnotesaplication.app-mergeDebugResources-66:/values-land/values-land.xml",
             "map": [
                 {
                     "source": "/home/gurudev/.gradle/caches/transforms-3/d94d9fec22775161306f232e32eb7cdb/transformed/firebase-inappmessaging-display-20.4.0/res/values-land/values-land.xml",
