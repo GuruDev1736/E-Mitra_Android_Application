@@ -101,7 +101,7 @@
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
 
-        <receiver android:name="com.guruprasad.tutionnotesaplication.Receiver.BroadCastReveiver" />
+        <receiver android:name="com.guruprasad.tutionnotesaplication.Receiver.AlaramReceiver" />
 
         <activity
             android:name="com.rajat.pdfviewer.PdfViewerActivity"

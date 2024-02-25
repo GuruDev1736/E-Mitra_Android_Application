@@ -1,16 +1,16 @@
-#Tue Feb 13 18:34:56 IST 2024
-base.0=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.10=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
-base.11=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
-base.2=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
-base.3=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.4=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.5=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.6=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.7=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-base.8=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-base.9=D\:\\E-Mitra\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Sun Feb 25 20:29:49 IST 2024
+base.0=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.10=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
+base.11=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes4.dex
+base.2=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
+base.3=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
+base.4=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
+base.5=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
+base.6=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
+base.7=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+base.8=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
+base.9=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=classes3.dex

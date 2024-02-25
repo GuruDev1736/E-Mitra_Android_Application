@@ -1,78 +1,74 @@
 [
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\file_layout.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\file_layout.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/create_note_actionbar.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/create_note_actionbar.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\imageoptiondialog.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\imageoptiondialog.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/imageoptiondialog.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/imageoptiondialog.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\image_show_dialog.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\image_show_dialog.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/searchdialog.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/searchdialog.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\fragment_notifications.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\fragment_notifications.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/custom_progress_dialog.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/custom_progress_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\activity_create_note.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\activity_create_note.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/activity_edit_note.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/activity_edit_note.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\activity_login.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/activity_main.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\activity_see_note.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\activity_see_note.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/image_show_dialog.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/image_show_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\fragmentchatbot.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\fragmentchatbot.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/file_layout.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/file_layout.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\imagestorelayout.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\imagestorelayout.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/activity_navigation.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/activity_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\activity_edit_note.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\activity_edit_note.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/fragmentchatbot.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/fragmentchatbot.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\activity_sign_up.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\activity_sign_up.xml"
-    },
-    {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\notelayout.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\notelayout.xml"
-    },
-    {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\create_note_actionbar.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\create_note_actionbar.xml"
-    },
-    {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\custom_progress_dialog.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\custom_progress_dialog.xml"
-    },
-    {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\searchdialog.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\searchdialog.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/activity_sign_up.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/activity_sign_up.xml"
     },
     {
         "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/fragment_notifications.xml",
         "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/fragment_notifications.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\activity_navigation.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\activity_navigation.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/notelayout.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/notelayout.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\fragment_home.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/activity_login.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\squad\\.gradle\\daemon\\8.2\\com.guruprasad.tutionnotesaplication.app-main-70:\\layout\\activity_main.xml"
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/imagestorelayout.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/imagestorelayout.xml"
+    },
+    {
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/fragment_home.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/activity_create_note.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/activity_create_note.xml"
+    },
+    {
+        "merged": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-67:/layout/activity_see_note.xml",
+        "source": "com.guruprasad.tutionnotesaplication.app-main-70:/layout/activity_see_note.xml"
     }
 ]

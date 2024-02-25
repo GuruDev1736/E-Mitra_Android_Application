@@ -4,7 +4,7 @@
             "outputFile": "com.guruprasad.tutionnotesaplication.app-mergeDebugResources-66:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\squad\\.gradle\\caches\\transforms-3\\d1c8545acf4d82ce8c120b962e717ee4\\transformed\\material-1.11.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "/home/gurudev/.gradle/caches/transforms-3/d1c8545acf4d82ce8c120b962e717ee4/transformed/material-1.11.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,17 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\squad\\.gradle\\caches\\transforms-3\\346193abee2e978d45933d3ee8b2c64b\\transformed\\appcompat-1.6.1\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\squad\\.gradle\\caches\\transforms-3\\d94d9fec22775161306f232e32eb7cdb\\transformed\\firebase-inappmessaging-display-20.4.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "/home/gurudev/.gradle/caches/transforms-3/d94d9fec22775161306f232e32eb7cdb/transformed/firebase-inappmessaging-display-20.4.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -47,6 +37,16 @@
                         "startOffsets": "1173,1246",
                         "endColumns": "72,71",
                         "endOffsets": "1241,1313"
+                    }
+                },
+                {
+                    "source": "/home/gurudev/.gradle/caches/transforms-3/346193abee2e978d45933d3ee8b2c64b/transformed/appcompat-1.6.1/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
                     }
                 }
             ]
