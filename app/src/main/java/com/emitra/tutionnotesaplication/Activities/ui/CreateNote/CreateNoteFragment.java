@@ -9,10 +9,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.bumptech.glide.Glide;
+import com.emitra.tutionnotesaplication.Activities.ui.Profile.ProfileFragment;
+import com.emitra.tutionnotesaplication.Models.UserModel;
+import com.emitra.tutionnotesaplication.R;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
@@ -21,6 +27,7 @@ import com.emitra.tutionnotesaplication.Constants;
 import com.emitra.tutionnotesaplication.CustomDialog;
 import com.emitra.tutionnotesaplication.Models.NoteDataModel;
 import com.emitra.tutionnotesaplication.databinding.FragmentHomeBinding;
+import com.google.firebase.database.ValueEventListener;
 
 public class CreateNoteFragment extends Fragment {
 
@@ -36,8 +43,38 @@ public class CreateNoteFragment extends Fragment {
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
+
         CustomDialog pd = new CustomDialog(requireContext());
         pd.show();
+
+        database.getReference().child("Users").child(auth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists())
+                {
+                    UserModel data = snapshot.getValue(UserModel.class);
+                    if (data!=null)
+                    {
+                        pd.dismiss();
+                        Glide.with(getContext()).load(data.getProfile_pic()).placeholder(R.drawable.user).into(binding.circleImageView);
+                        binding.circleImageView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Navigation.findNavController(v).navigate(R.id.navigation_profile);
+                            }
+                        });
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Constants.error(getContext(),"Failed to get the user data");
+                pd.dismiss();
+            }
+        });
+
+
 
 
         binding.create.setOnClickListener(new View.OnClickListener() {

@@ -8,20 +8,31 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@+id/circleImageView"
         android:background="@drawable/search_background"
         android:imeOptions="actionSearch"
         android:maxLines="1">
 
     </androidx.appcompat.widget.SearchView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/recyclerview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/user" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/create"

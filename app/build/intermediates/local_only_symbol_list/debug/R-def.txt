@@ -75,6 +75,7 @@ id btn_login
 id btn_signup
 id camera
 id cancel
+id circleImageView
 id close
 id container
 id copy
