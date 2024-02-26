@@ -38,8 +38,8 @@ public class SeeNoteAdapter extends FirebaseRecyclerAdapter<NoteDataModel, SeeNo
 
         if (model != null) {
             holder.title.setText(truncateString(model.getFilename(), 15));
-            holder.upload.setVisibility(View.INVISIBLE);
-            holder.delete.setVisibility(View.INVISIBLE);
+            holder.upload.setVisibility(View.GONE);
+            holder.delete.setVisibility(View.GONE);
 
             holder.see.setOnClickListener(new View.OnClickListener() {
                 @Override
