@@ -346,57 +346,8 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
         binding.tags.setAdapter(arrayAdapter);
 
 
-        binding.remainder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showTimePicker();
-            }
-        });
-
-
     }
 
-    private void showTimePicker() {
-        MaterialTimePicker picker = new MaterialTimePicker.Builder()
-                .setTimeFormat(TimeFormat.CLOCK_12H)
-                .setHour(12)
-                .setMinute(0)
-                .setTitleText("Select the time")
-                .build();
-
-        picker.show(getSupportFragmentManager(), "Admin");
-        picker.addOnPositiveButtonClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View v) {
-
-
-                if (picker.getHour() > 12) {
-
-                    int hour = picker.getHour() - 12;
-                    int minute = picker.getMinute();
-                    String time = String.format("%02d:%02d", hour, minute); // Format the time
-                    binding.time.setText(time);
-                } else {
-                    binding.time.setText(picker.getHour() + " : " + picker.getMinute());
-                }
-
-                calendar = Calendar.getInstance();
-                calendar.set(Calendar.HOUR_OF_DAY, picker.getHour());
-                calendar.set(Calendar.MINUTE, picker.getMinute());
-                calendar.set(Calendar.SECOND, 0);
-                calendar.set(Calendar.MILLISECOND, 0);
-
-            }
-        });
-
-        binding.cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //cancelAlaram();
-            }
-        });
-    }
 
     private void cancelAlaram() {
         Intent intent = new Intent(this, AlaramReceiver.class); // Correcting the misspelled class name

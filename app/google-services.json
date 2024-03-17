@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "279497909418",
-    "firebase_url": "https://e-mitra-90c2c-default-rtdb.firebaseio.com",
-    "project_id": "e-mitra-90c2c",
-    "storage_bucket": "e-mitra-90c2c.appspot.com"
+    "project_number": "907342068278",
+    "firebase_url": "https://pdfgen-adad3-default-rtdb.firebaseio.com",
+    "project_id": "pdfgen-adad3",
+    "storage_bucket": "pdfgen-adad3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:279497909418:android:a41d690790bf05683c9cd3",
+        "mobilesdk_app_id": "1:907342068278:android:6170c271327dc90c29b697",
         "android_client_info": {
           "package_name": "com.emitra.tutionnotesaplication"
         }
@@ -16,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBVbCk-YiMf1X4gdFQ2h8lNgdQO_PutWPQ"
+          "current_key": "AIzaSyDf4nuEQjx1XLC9dPmRc-OwI9tZi9r1odU"
         }
       ],
       "services": {

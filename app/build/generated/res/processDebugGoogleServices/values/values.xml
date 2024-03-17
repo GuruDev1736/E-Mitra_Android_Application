@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="firebase_database_url" translatable="false">https://e-mitra-90c2c-default-rtdb.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">279497909418</string>
-    <string name="google_api_key" translatable="false">AIzaSyBVbCk-YiMf1X4gdFQ2h8lNgdQO_PutWPQ</string>
-    <string name="google_app_id" translatable="false">1:279497909418:android:a41d690790bf05683c9cd3</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBVbCk-YiMf1X4gdFQ2h8lNgdQO_PutWPQ</string>
-    <string name="google_storage_bucket" translatable="false">e-mitra-90c2c.appspot.com</string>
-    <string name="project_id" translatable="false">e-mitra-90c2c</string>
+    <string name="firebase_database_url" translatable="false">https://pdfgen-adad3-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">907342068278</string>
+    <string name="google_api_key" translatable="false">AIzaSyDf4nuEQjx1XLC9dPmRc-OwI9tZi9r1odU</string>
+    <string name="google_app_id" translatable="false">1:907342068278:android:6170c271327dc90c29b697</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDf4nuEQjx1XLC9dPmRc-OwI9tZi9r1odU</string>
+    <string name="google_storage_bucket" translatable="false">pdfgen-adad3.appspot.com</string>
+    <string name="project_id" translatable="false">pdfgen-adad3</string>
 </resources>

@@ -1,19 +1,19 @@
-#Mon Feb 26 23:41:42 IST 2024
-base.0=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.10=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
-base.11=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
-base.12=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
-base.13=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
-base.14=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeExtDexDebug/classes4.dex
-base.2=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
-base.3=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
-base.4=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.5=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
-base.6=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.7=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
-base.8=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
-base.9=/run/media/gurudev/APP/E-Mitra/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+#Sun Mar 17 23:30:31 IST 2024
+base.0=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.10=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.11=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.12=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.13=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.14=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
+base.2=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.4=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.5=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.6=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.7=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.8=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.9=E\:\\E-Mitra_Android_Application\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=8/classes.dex
