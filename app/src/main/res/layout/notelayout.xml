@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:orientation="horizontal"
+    android:backgroundTint="@color/white"
     android:id="@+id/layout"
     app:cardElevation="10dp">
 

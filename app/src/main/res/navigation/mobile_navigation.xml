@@ -22,4 +22,22 @@
         android:name="com.emitra.tutionnotesaplication.Activities.ui.Profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_pdf"
+        android:name="com.emitra.tutionnotesaplication.Activities.ui.PDFGenerator.PDFGeneratorFragment"
+        android:label="PDF Generator"
+        tools:layout="@layout/fragment_p_d_f_generator" />
+
+    <fragment
+        android:id="@+id/imageToPDF"
+        android:name="com.emitra.tutionnotesaplication.Activities.ui.PDFGenerator.ImageToPDFFragment"
+        android:label="PDF Generator"
+        tools:layout="@layout/fragment_image_to_p_d_f" />
+
+    <fragment
+        android:id="@+id/textToPDF"
+        android:name="com.emitra.tutionnotesaplication.Activities.ui.PDFGenerator.TextToPDFFragment"
+        android:label="PDF Generator"
+        tools:layout="@layout/fragment_text_to_p_d_f" />
 </navigation>

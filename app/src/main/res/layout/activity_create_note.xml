@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".Activities.ui.CreateNote.CreateNoteActivity">
 
     <include
@@ -26,6 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/white"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -57,6 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/white"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -123,6 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/primary"
                 android:src="@drawable/baseline_mic_24" />
 
 
@@ -131,6 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:backgroundTint="@color/primary"
                 android:layout_margin="10dp"
                 android:drawableLeft="@drawable/search"
                 android:text="Search" />
@@ -139,6 +144,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
                 android:layout_margin="10dp"
                 app:cardElevation="5dp">
 

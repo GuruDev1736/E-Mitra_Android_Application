@@ -24,6 +24,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
 
     <application
@@ -35,6 +36,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/notelogo"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.TutionNotesAplication"
         tools:targetApi="tiramisu">
         <activity

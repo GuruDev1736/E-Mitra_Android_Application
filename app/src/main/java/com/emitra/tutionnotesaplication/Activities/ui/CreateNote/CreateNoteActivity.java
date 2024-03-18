@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ActivityNotFoundException;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -16,6 +17,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
+import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,13 +62,14 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CreateNoteActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class CreateNoteActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, TextToSpeech.OnInitListener {
 
     public static final String ACTION_CUSTOM_BROADCAST = "com.guruprasad.tutionnotesaplication.ACTION_CUSTOM_BROADCAST";
     ActivityCreateNoteBinding binding;
@@ -85,7 +89,9 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
     private String UserId;
     private String filepath;
     private AlarmManager alarmManager;
-    private Calendar calendar;
+    private static final int REQUEST_CODE_VOICE_INPUT = 1736;
+
+    private TextToSpeech textToSpeech;
 
     public static String truncateString(String input, int maxLength) {
         if (input.length() <= maxLength) {
@@ -109,8 +115,7 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
 
         ApiInterface apiInterface = ApiUtilities.INSTANCE.getinstance().create(ApiInterface.class);
 
-        notificationChannel();
-
+        textToSpeech = new TextToSpeech(this, this);
 
         binding.actionbar.back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -346,24 +351,13 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
         binding.tags.setAdapter(arrayAdapter);
 
 
+        binding.mic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startVoiceInput();
+            }
+        });
     }
-
-
-    private void cancelAlaram() {
-        Intent intent = new Intent(this, AlaramReceiver.class); // Correcting the misspelled class name
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE); // Change FLAG_IMMUTABLE to FLAG_UPDATE_CURRENT if you need to update the PendingIntent
-
-        if (alarmManager == null) {
-
-            alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-
-        }
-
-        alarmManager.cancel(pendingIntent);
-        Constants.error(CreateNoteActivity.this, "Remainder Cancel");
-
-    }
-
     private void takePicture(AlertDialog dialog) {
 
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -414,6 +408,12 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
             imageAdapter.notifyDataSetChanged();
         }
 
+        if (requestCode == REQUEST_CODE_VOICE_INPUT && resultCode == RESULT_OK && data != null) {
+            ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            String spokenText = result != null && !result.isEmpty() ? result.get(0) : "";
+            binding.note.setText(spokenText);
+        }
+
     }
 
     private String getFileName(Uri uri) {
@@ -453,33 +453,42 @@ public class CreateNoteActivity extends AppCompatActivity implements AdapterView
 
     }
 
-    private void notificationChannel() {
-        CharSequence name = "Admin";
-        String description = "Channel for notifications";
-        int importance = NotificationManager.IMPORTANCE_HIGH;
-        NotificationChannel channel = null;
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            channel = new NotificationChannel("Admin", name, importance);
-            channel.setDescription(description);
-
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            if (notificationManager != null) {
-                notificationManager.createNotificationChannel(channel);
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+            // Set language to the default locale
+            int result = textToSpeech.setLanguage(Locale.getDefault());
+            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Constants.error(this, "Language not supported");
             }
+        } else {
+           Constants.error(this, "Text-to-Speech initialization failed");
         }
     }
 
-    private void setAlarm() {
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(this, AlaramReceiver.class); // Correcting the misspelled class name
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE); // Change FLAG_IMMUTABLE to FLAG_UPDATE_CURRENT if you need to update the PendingIntent
+    private void startVoiceInput() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak something");
 
-        // Schedule the alarm using the provided time in milliseconds from the calendar
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        try {
+            startActivityForResult(intent, REQUEST_CODE_VOICE_INPUT);
+        } catch (ActivityNotFoundException e) {
+           Constants.error(this, "Speech recognition not supported on this device");
+        }
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Shutdown Text-to-Speech engine
+        if (textToSpeech != null) {
+            textToSpeech.stop();
+            textToSpeech.shutdown();
+        }
+    }
 }
 
 

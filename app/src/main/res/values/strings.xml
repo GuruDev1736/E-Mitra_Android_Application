@@ -20,6 +20,7 @@
     <string name="time">Time</string>
     <string name="date">Date</string>
     <string name="done">Done</string>
+    <string name="hello">Hello</string>
 
     <string-array name="tags">
         <item>Study</item>

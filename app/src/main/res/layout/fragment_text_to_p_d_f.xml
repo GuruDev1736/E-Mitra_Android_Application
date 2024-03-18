@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activities.ui.PDFGenerator.TextToPDFFragment">
+
+    <include
+        android:id="@+id/action_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/custom_action_bar"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write Your Text Here"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_margin="10dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="@color/white"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/textInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
+                android:hint="Enter the text"
+                android:layout_margin="10dp"
+                android:maxLines="25"
+                android:background="@color/transparent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/convertToPdfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/primary"
+        android:text="Convert to PDF and Download"
+        android:layout_marginTop="16dp"/>
+
+
+
+</LinearLayout>

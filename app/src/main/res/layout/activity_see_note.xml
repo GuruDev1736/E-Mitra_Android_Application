@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".Activities.ui.CreateNote.SeeNoteActivity">
 
     <include
@@ -25,6 +26,7 @@
             <com.google.android.material.card.MaterialCardView
                 app:cardElevation="5dp"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -59,6 +61,7 @@
                 app:cardElevation="5dp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
                 android:layout_height="200dp">
 
                 <LinearLayout
@@ -74,24 +77,25 @@
                         android:text="Write The Notes Here"
                         android:textSize="15sp"/>
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout"
+                    <ScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:boxBackgroundMode="none">
+                        android:layout_height="match_parent">
 
-                        <EditText
-                            android:id="@+id/note"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:maxLines="10"
-                            android:textSize="15sp"
-                            android:background="@null"
-                            android:editable="false"
-                            android:cursorVisible="false"
-                            android:inputType="none"/>
+                            android:layout_height="wrap_content">
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                            <TextView
+                                android:id="@+id/note"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:text ="@string/hello"
+                                android:layout_margin="10dp"/>
+
+                        </LinearLayout>
+                    </ScrollView>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -99,6 +103,7 @@
                 app:cardElevation="5dp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
                 android:layout_height="wrap_content">
 
                 <LinearLayout

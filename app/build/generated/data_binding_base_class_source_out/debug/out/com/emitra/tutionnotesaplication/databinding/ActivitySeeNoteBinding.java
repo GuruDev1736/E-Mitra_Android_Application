@@ -7,13 +7,13 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.emitra.tutionnotesaplication.R;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.textview.MaterialTextView;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -30,7 +30,7 @@ public final class ActivitySeeNoteBinding implements ViewBinding {
   public final RecyclerView imageRecview;
 
   @NonNull
-  public final EditText note;
+  public final TextView note;
 
   @NonNull
   public final MaterialTextView notetext;
@@ -45,16 +45,12 @@ public final class ActivitySeeNoteBinding implements ViewBinding {
   public final MaterialTextView tag;
 
   @NonNull
-  public final TextInputLayout textInputLayout;
-
-  @NonNull
   public final EditText title;
 
   private ActivitySeeNoteBinding(@NonNull LinearLayout rootView,
       @NonNull CreateNoteActionbarBinding actionbar, @NonNull RecyclerView imageRecview,
-      @NonNull EditText note, @NonNull MaterialTextView notetext, @NonNull ProgressBar progressbar,
-      @NonNull RecyclerView recyclerview, @NonNull MaterialTextView tag,
-      @NonNull TextInputLayout textInputLayout, @NonNull EditText title) {
+      @NonNull TextView note, @NonNull MaterialTextView notetext, @NonNull ProgressBar progressbar,
+      @NonNull RecyclerView recyclerview, @NonNull MaterialTextView tag, @NonNull EditText title) {
     this.rootView = rootView;
     this.actionbar = actionbar;
     this.imageRecview = imageRecview;
@@ -63,7 +59,6 @@ public final class ActivitySeeNoteBinding implements ViewBinding {
     this.progressbar = progressbar;
     this.recyclerview = recyclerview;
     this.tag = tag;
-    this.textInputLayout = textInputLayout;
     this.title = title;
   }
 
@@ -108,7 +103,7 @@ public final class ActivitySeeNoteBinding implements ViewBinding {
       }
 
       id = R.id.note;
-      EditText note = ViewBindings.findChildViewById(rootView, id);
+      TextView note = ViewBindings.findChildViewById(rootView, id);
       if (note == null) {
         break missingId;
       }
@@ -137,12 +132,6 @@ public final class ActivitySeeNoteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textInputLayout;
-      TextInputLayout textInputLayout = ViewBindings.findChildViewById(rootView, id);
-      if (textInputLayout == null) {
-        break missingId;
-      }
-
       id = R.id.title;
       EditText title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
@@ -150,7 +139,7 @@ public final class ActivitySeeNoteBinding implements ViewBinding {
       }
 
       return new ActivitySeeNoteBinding((LinearLayout) rootView, binding_actionbar, imageRecview,
-          note, notetext, progressbar, recyclerview, tag, textInputLayout, title);
+          note, notetext, progressbar, recyclerview, tag, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

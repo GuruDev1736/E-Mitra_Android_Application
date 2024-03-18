@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ui.PDFGenerator.ImageToPDFFragment">
+
+    <include
+        android:id="@+id/action_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/custom_action_bar"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:src="@mipmap/notelogo"/>
+
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Image"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/primary"
+        android:layout_marginTop="50dp"/>
+
+
+    <Button
+        android:id="@+id/downloadAsPdfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download as PDF"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:backgroundTint="@color/primary"
+        android:layout_below="@id/selectImageButton"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

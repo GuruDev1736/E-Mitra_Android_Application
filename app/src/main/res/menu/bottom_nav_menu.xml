@@ -16,4 +16,9 @@
         android:icon="@drawable/outline_account_circle_24"
         android:title="@string/profile" />
 
+    <item
+        android:id="@+id/navigation_pdf"
+        android:icon="@drawable/pdf_logo"
+        android:title="PDF Generater" />
+
 </menu>

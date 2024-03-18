@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
@@ -18,7 +17,6 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.android.material.textview.MaterialTextView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -34,19 +32,16 @@ public final class ActivityCreateNoteBinding implements ViewBinding {
   public final CreateNoteActionbarBinding actionbar;
 
   @NonNull
-  public final ImageView cancel;
+  public final MaterialButton create;
 
   @NonNull
-  public final MaterialButton create;
+  public final FloatingActionButton mic;
 
   @NonNull
   public final EditText note;
 
   @NonNull
   public final RecyclerView recyclerview;
-
-  @NonNull
-  public final FloatingActionButton remainder;
 
   @NonNull
   public final ExtendedFloatingActionButton search;
@@ -58,30 +53,23 @@ public final class ActivityCreateNoteBinding implements ViewBinding {
   public final TextInputLayout textInputLayout;
 
   @NonNull
-  public final MaterialTextView time;
-
-  @NonNull
   public final EditText title;
 
   private ActivityCreateNoteBinding(@NonNull LinearLayout rootView,
       @NonNull RecyclerView ImageRecyclerview, @NonNull CreateNoteActionbarBinding actionbar,
-      @NonNull ImageView cancel, @NonNull MaterialButton create, @NonNull EditText note,
-      @NonNull RecyclerView recyclerview, @NonNull FloatingActionButton remainder,
-      @NonNull ExtendedFloatingActionButton search, @NonNull Spinner tags,
-      @NonNull TextInputLayout textInputLayout, @NonNull MaterialTextView time,
-      @NonNull EditText title) {
+      @NonNull MaterialButton create, @NonNull FloatingActionButton mic, @NonNull EditText note,
+      @NonNull RecyclerView recyclerview, @NonNull ExtendedFloatingActionButton search,
+      @NonNull Spinner tags, @NonNull TextInputLayout textInputLayout, @NonNull EditText title) {
     this.rootView = rootView;
     this.ImageRecyclerview = ImageRecyclerview;
     this.actionbar = actionbar;
-    this.cancel = cancel;
     this.create = create;
+    this.mic = mic;
     this.note = note;
     this.recyclerview = recyclerview;
-    this.remainder = remainder;
     this.search = search;
     this.tags = tags;
     this.textInputLayout = textInputLayout;
-    this.time = time;
     this.title = title;
   }
 
@@ -125,15 +113,15 @@ public final class ActivityCreateNoteBinding implements ViewBinding {
       }
       CreateNoteActionbarBinding binding_actionbar = CreateNoteActionbarBinding.bind(actionbar);
 
-      id = R.id.cancel;
-      ImageView cancel = ViewBindings.findChildViewById(rootView, id);
-      if (cancel == null) {
-        break missingId;
-      }
-
       id = R.id.create;
       MaterialButton create = ViewBindings.findChildViewById(rootView, id);
       if (create == null) {
+        break missingId;
+      }
+
+      id = R.id.mic;
+      FloatingActionButton mic = ViewBindings.findChildViewById(rootView, id);
+      if (mic == null) {
         break missingId;
       }
 
@@ -146,12 +134,6 @@ public final class ActivityCreateNoteBinding implements ViewBinding {
       id = R.id.recyclerview;
       RecyclerView recyclerview = ViewBindings.findChildViewById(rootView, id);
       if (recyclerview == null) {
-        break missingId;
-      }
-
-      id = R.id.remainder;
-      FloatingActionButton remainder = ViewBindings.findChildViewById(rootView, id);
-      if (remainder == null) {
         break missingId;
       }
 
@@ -173,12 +155,6 @@ public final class ActivityCreateNoteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.time;
-      MaterialTextView time = ViewBindings.findChildViewById(rootView, id);
-      if (time == null) {
-        break missingId;
-      }
-
       id = R.id.title;
       EditText title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
@@ -186,8 +162,7 @@ public final class ActivityCreateNoteBinding implements ViewBinding {
       }
 
       return new ActivityCreateNoteBinding((LinearLayout) rootView, ImageRecyclerview,
-          binding_actionbar, cancel, create, note, recyclerview, remainder, search, tags,
-          textInputLayout, time, title);
+          binding_actionbar, create, mic, note, recyclerview, search, tags, textInputLayout, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
